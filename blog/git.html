@@ -14,15 +14,19 @@
     <p>
       Ok so first a quick disclaimer.  I've never written a blog before and am not the worlds greatest writer so I apologize in advance if this blog is less badass than the title implies. I'm also very new to the topic of version control myself and although I think I have a handle on it I can't completely guarantee the accuracy of what follows. Anyway here goes..
     </p>
+    <h4>What is version control and why use it?</h4>
     <p>
-        What is version control and why use it? 
 
         Version control is a way of recording the changes you make to a file or files over time.  Instead of having to save new versions of the files every time you make a change (which would waste a lot of disk space) version control systems simply keep track of what you've changed and allow you to return to a previous version at any time.  So why use it? why not just save regularly? Let's consider a non coding example.
+     </p>  
+     <p> 
 
         Imagine your writing a text document(it could be a report for work or school, a blog post about Spiderman or plan for world domination, it really doesn't matter).  You start by typing up a rough draft. After reading it trough your quite happy but think it still needs some work, so you start editing. Your concerned about losing your work so as you edit you save regularly. When your done editing you read it through again and discover something horrible!!  Due to a combination of sleep deprivation and the bottle of rum you've been chugging along the way you've completely ruined your document. It no longer flows well, the arguments are poorly formed and some of the words aren't even real words. To make mattes worse you can't go back to your original draft because you've been saving over it all this time. If you'd been using a version control system this would not be a problem. You could easily revert back to your original draft. Version control is even more important when working with code because making a simple mistake can easily introduce a bug and break code that was working fine before.  
     </p>
+       
+    <h4>What is Git and how does it help?</h4>  
     <p>
-       So what is Git and how does it help?
+       
 
        As you can probably guess Git is a version control system (It also happens to be one of the more popular ones). There are many other systems available but I've never tried them so I really can't comment on their relative merits.  
        Git runs through the command line interface and with a few simple commands allows you to keep track of changes you've made. This is achieved by using a 'git repository'. This is a special file created by git that sits in the directory of whatever files your working on. It can log changes you make to any files in that directory or it's sub directories. There are many different git commands but the most important ones you'll need to know are:
@@ -32,10 +36,9 @@
        'git commit' - Which 'commits' all changes from the staging areas to the repository.
        You can also use 'git push' to upload the git repository along with copies of your files to GitHub.
     </p>
-
+    <h4>What the hell is GitHub and why should I use it?</h4>
     <p>
-       What the hell is GitHub and why should I use it?
-
+      
        GitHub is an online service designed for storing and sharing Git repositories. As well as providing a useful backup uploading to GitHub also allows you to share your code with others. It is particularly useful when several coders are working together on a single project. If you have a repository on GitHub for a joint project each coder can clone this repository to their own machine and work on whatever aspect of the project they have been tasked with before uploading the updated files to GitHub for approval. Once these files have been reviewed they can be merged back into the main repository. With this system each member of the team can be working on different aspects of the project simultaneously without corrupting the original files. 
 
     </p>  
