@@ -8,7 +8,7 @@
   	 <header>
       <!--Basic header with title and image (monkey image is just a place holder, will be replaced with an aproproate photo of me later) -->
   	 	<h1>Peter Lowe</h2>
-  	 		<h3>Wed Developer</h3>
+  	 		<h3>Web Developer</h3>
   	 		<img src="http://farm1.static.flickr.com/44/135465557_175bc49efc.jpg"/>
   	 </header>
      <!-- Short into will probably be extended at a later date -->
@@ -19,12 +19,21 @@
   <ul>
     <!-- Links in this list are currently non functional as I have not yet made the pages they link to -->
      <li><a href="peterlowe42.github.io/about">About me</a></li>
-     <li><a href="peterlowe42.github.io/projects">Projects</a></li>
+     <li>
+      <!-- Clicking projects button opens a menu to select specific project. This menu will be styled to match the rest of the buttons -->
+      <select onChange="window.location.href=this.value">
+        <option value="peterlowe42.github.io/projects">Projects</option>
+        <option value="peterlowe42.github.io/projects/project-1">Project 1</option>
+        <option value="peterlowe42.github.io/projects/project-2">Project 2</option>
+        <option value="peterlowe42.github.io/projects/preject-3">Peoject 3</option>
+        </select>
+      </li>
      <li><a href="peterlowe42.github.io/blog/index">Technical Blog</a></li>
       <li><a href="peterlowe42.github.io/contact">Contact</a></li>
 
       <footer>
-       <a hfef="peterlowe42.github.io/sitemap">Site Map</a>
+        <!-- Site map not yet created -->
+       <a href="peterlowe42.github.io/sitemap">Site Map</a>
 <!-- Social media icons with links to my pages. Logo images are linked from other websites for now. I will uplaod my own logo files to github next week so that they are all formatted the same. -->
         
        <ul>
