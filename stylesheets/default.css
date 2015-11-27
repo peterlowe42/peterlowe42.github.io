@@ -26,10 +26,12 @@ header {
        letter-spacing: 0.2em;
 }
 
-.into {
-	font-size: Roboto;
-	font-size:2em;
-	
+.intro {
+	font-family: 'Roboto', 'Sans serif';
+	font-size:1.8em;
+	position: absolute;
+	left:340px;
+
 }
 
 #mypic {
@@ -37,9 +39,9 @@ header {
 	border-radius: 20px;
 	position:absolute;
 	top:20px;
-	left:20px;
-	height: 200px;
-	width: 200px;
+	left:40px;
+	height: 250px;
+	width: 250px;
 
 }
 
@@ -57,7 +59,15 @@ header {
    background:#004570;
 }
 
+#buttons {
+	margin-top:100px;
+	margin-bottom: 100px;
+    vertical-align: middle;
+   	
+}
+
 .bigbutton {
+	font-family: 'Roboto';
 	text-decoration: none;
 	font-size: 3em;
 	display:inline;
