@@ -1,0 +1,42 @@
+
+
+#wrapper {
+	min-height: 100%;
+	position:relative;
+	background: #0075BD;
+}
+
+header {
+   background:#004570;
+   padding:10px;
+}
+
+#content {
+   padding:10px;
+   padding-bottom:60px; 
+   background: #0075BD; 
+}
+
+#foot {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:100px;  
+   background:#004570;
+}
+
+.bigbutton {
+	text-decoration: none;
+	font-size: 3em;
+	display:inline;
+	margin:50px;
+	border:6px solid black;
+	border-radius: 50px;
+	padding:50px;
+	background-color:#2B7488;
+} 
+
+.social {
+	display:inline;
+	padding:10px;
+}
