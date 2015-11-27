@@ -1,14 +1,46 @@
-
-
-#wrapper {
-	min-height: 100%;
+#container {
+	height: 100%;
+	width: 100%;
 	position:relative;
 	background: #0075BD;
 }
 
 header {
+   line-height: 0.3;
+   text-align: center;
+   color:white;
+   font-family: 'Patua One', 'sans serif';
    background:#004570;
    padding:10px;
+}
+
+.title {
+
+	font-size: 3.5em;
+	letter-spacing: 0.3em;
+
+}
+
+.subtitle {
+       font-size: 1.5em;
+       letter-spacing: 0.2em;
+}
+
+.into {
+	font-size: Roboto;
+	font-size:2em;
+	
+}
+
+#mypic {
+	border:4px solid black;
+	border-radius: 20px;
+	position:absolute;
+	top:20px;
+	left:20px;
+	height: 200px;
+	width: 200px;
+
 }
 
 #content {
