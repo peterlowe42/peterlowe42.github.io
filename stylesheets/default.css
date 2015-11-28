@@ -1,9 +1,9 @@
 #container {
-	height: 100%;
-	width: 100%;
+	min-height: 100%;
+	min-width: 100%;
 	position:relative;
-    background-image: url(./imgs/Turlte.jpg);
-	background-color: #0075BD;
+    background-image: url(https://github.com/peterlowe42/peterlowe42.github.io/blob/master/stylesheets/imgs/Turlte.jpg?raw=true);
+	background: #0075BD;
 }
 
 header {
@@ -42,7 +42,7 @@ header {
 	top:20px;
 	left:40px;
 	height: 250px;
-	width: 250px;
+	width: 280px;
 
 }
 
