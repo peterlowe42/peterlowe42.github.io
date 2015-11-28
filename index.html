@@ -8,7 +8,7 @@
   </head>
 
   <body>
-    <div id="container">
+    
   	   <header>
       <!--Basic header with title and image (monkey image is just a place holder, will be replaced with an aproproate photo of me later) -->
   	 	  <h1 class="title">Peter Lowe</h2>
@@ -22,44 +22,43 @@
      <!-- Simple unrdered list for options. Will be sytled into nice looking buttons at a later stage.-->
 
        
-    <!-- Links in this list are currently non functional as I have not yet made the pages they link to -->
-      <div id="buttons">  
-       <a class="bigbutton" href="http://peterlowe42.github.io/about.html">About me</a>
+     <!-- Links in this list are currently non functional as I have not yet made the pages they link to except for the blog link that links to the html skeleton -->
+    <section id="buttons"> 
+       <a class="bigbutton" id="about" href="http://peterlowe42.github.io/about.html">About me</a>
        <!-- Clicking projects button opens a menu to select specific project. This menu will be styled to match the rest of the buttons -->
         
-      <select class="bigbutton" onChange="window.location.href=this.value">
+      <select class="bigbutton" id="projects" onChange="window.location.href=this.value">
         <option value="http://peterlowe42.github.io/projects/index.html">Projects</option>
         <option value="http://peterlowe42.github.io/projects/project-1.html">Project 1</option>
         <option value="http://peterlowe42.github.io/projects/project-2.html">Project 2</option>
         <option value="http://peterlowe42.github.io/projects/preject-3.html">Peoject 3</option>
       </select>
                 
-       <a class="bigbutton" href="http://peterlowe42.github.io/blog/index.html">Technical Blog</a>
+       <a class="bigbutton" id="blog" href="http://peterlowe42.github.io/blog/index.html">Technical Blog</a>
     
-       <a class="bigbutton" href="http://peterlowe42.github.io/contact.html">Contact</a>
-      </div> 
-        
-    </div>     
+       <a class="bigbutton" id="contact" href="http://peterlowe42.github.io/contact.html">Contact</a>
+    </section>
+      </div>     
       
       <div id="foot">
         <footer>
         <!-- Site map not yet created -->
         <a href="http:/peterlowe42.github.io/sitemap.html">Site Map</a>
-<!-- Social media icons with links to my pages. Logo images are linked from other websites for now. I will uplaod my own logo files to github next week so that they are all formatted the same. -->
+
         
-      
-         <a href="https://www.linkedin.com/in/peter-lowe-951308109">
-         <img class="social" src="https://github.com/peterlowe42/peterlowe42.github.io/blob/master/stylesheets/imgs/Linkedin.png?raw=true"/>
-         </a>
-         <a href="https://twitter.com/PeterLowe42">
-         <img class="social" src="https://github.com/peterlowe42/peterlowe42.github.io/blob/master/stylesheets/imgs/twitter.png?raw=true"/>
-         </a>
-         <a href="https://github.com/peterlowe42">
-         <img class="social" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTpGnxiZVpd6Li7DyXdJ_GUKejqxPiTmLYaUQg68Vrs6JU20xZw5Q"/>
-         </a>
+         <section id="smlinks">
+           <a href="https://www.linkedin.com/in/peter-lowe-951308109">
+             <img class="social" src="https://github.com/peterlowe42/peterlowe42.github.io/blob/master/stylesheets/imgs/Linkedin.png?raw=true"/>
+           </a>
+           <a href="https://twitter.com/PeterLowe42">
+              <img class="social" src="https://github.com/peterlowe42/peterlowe42.github.io/blob/master/stylesheets/imgs/twitter.png?raw=true"/>
+           </a>
+           <a href="https://github.com/peterlowe42">
+             <img class="social" src="https://github.com/peterlowe42/peterlowe42.github.io/blob/master/stylesheets/imgs/github.png?raw=true"/>
+           </a>
+         </section>
         </footer> 
-     </div>  
-    
-    </div>
+      </div>  
+  
   </body>
 </html>  
