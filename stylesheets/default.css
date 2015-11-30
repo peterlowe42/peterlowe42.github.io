@@ -12,10 +12,11 @@ header {
    font-family: 'Patua One', 'sans serif';
    background:#005670;
    padding:10px;
-   width:100%;
+   width:1800px;
    position:absolute;
    top:0px;
    left:0px;
+   min-height: 80px;
 }
 
 
@@ -115,6 +116,7 @@ section > a:hover {
 }
 
 section > select:hover {
+
 	color:#700000;
 }
 

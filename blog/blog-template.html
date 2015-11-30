@@ -8,11 +8,11 @@
   <body>
   <div id="wrapper"> 
     <header>
-      <h1>Pete's Badass Technical Blog</h1>
+      <h1 class="title">Pete's Badass Technical Blog</h1>
+      <section id="navbar">
+      <a class="navbutton" href="https://peterlowe42.github.io/blog/index.html">Home</a>
       
-      <a id="navbutton" href="https://peterlowe42.github.io/blog/index.html">Home</a>
-      
-      <select id="navbutton" onChange="window.location.href=this.value">
+      <select class="navbutton" onChange="window.location.href=this.value">
           <option value="">Topics</option>
           <option value="https://peterlowe42.github.io/blog/git.html">Version Control</option>
           <option value="">Topic 2</option>
@@ -22,6 +22,7 @@
           <option value="https://peterlowe42.github.io/blog/">Topic 6</option>
           <option value="https://peterlowe42.github.io/blog/">Topic 7</option>
       </select>
+      </section>
     </header>
     
       <div id="post-title"><h2>Blog post title</h2></div>
@@ -29,7 +30,7 @@
 
       <div id="date"><h3>MM/DD/YYYY</h3></div>
 
-      <div id="content">
+      <section id="content">
       <p>
         Paragraph 1
       </p>
@@ -39,7 +40,7 @@
       <p>
         Paragraph 3
        </p>
-    </div>   
+    </section>   
    </div>    
 </body>
 </html>
