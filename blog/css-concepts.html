@@ -18,7 +18,7 @@
       <select class="navbutton" onChange="window.location.href=this.value">
           <option value="">Topics</option>
           <option value="https://peterlowe42.github.io/blog/git.html">Version Control</option>
-          <option value="">Topic 2</option>
+          <option value="https://peterlowe42.github.io/blog/css-concepts.html">CSS Positioning</option>
           <option value="https://peterlowe42.github.io/blog/">Topic 3</option>
           <option value="https://peterlowe42.github.io/blog/">Topic 4</option>
           <option value="https://peterlowe42.github.io/blog/">Topic 5</option>
@@ -28,23 +28,66 @@
       </section>
     </header>
     
-      id="post-title"<h2>Blog post title</h2></div>
-      <img id="image" src="https://s-media-cache-ak0.pinimg.com/236x/cd/4b/4f/cd4b4fef88d00738f3a5390f37262417.jpg"/>
+      <div id="post-title"><h2>CSS Positioning</h2></div>
+      <img id="image" src="https://github.com/peterlowe42/peterlowe42.github.io/blob/master/stylesheets/imgs/Css%20postioning.jpg?raw=true"/>
 
-      <div id="date"><h3>MM/DD/YYYY</h3></div>
+      <div id="date"><h3>11/30/15</h3></div>
 
       <section id="content">
       <p>
-        Paragraph 1
+        If you're looking at the image above and thinking 'Wait, why would you use an image of such poorly aligned things in an article about positioning?' then clearly you have yet to experience the bittersweet joys of CSS.   If this is indeed your first venture into the world of CSS positioning then know this, it will NOT be easy.  In-fact you're likely to give serious consideration to setting fire to your computer and running away to live a tech free life in the forest  before all this is over.   Rest assured though, CSS has been used to style practically every page on the web for a good fifteen years now and despite it's awkward and fiddly nature it really does work once you get the hang of it.   
       </p>
       <p>
-        Paragraph 2
+        The first thing you're going to need to get comfortable with if you're going to make your layout work is the different types of positioning built into CSS.   Any HTML object can be assigned a 'position' property within your CSS style sheet.  These position properties come in four different types: static, relative, absolute and fixed.   
       </p>
+      <h4>Static</h4>
+
       <p>
-        Paragraph 3
+        Static positioning is the default position property assigned to each object at the start.  Unless you specify otherwise every object on your page has static positioning.  Objects with static positioning are considered 'unpositioned' by CSS. (this will become relevent later on when we talk about absolute positioning).  For this reason your not really going to move your objects around the page but it is important to know that unless you specifically tell it otherwise every object has a static position. 
+       </p>
+       <h4>Relative</h4>
+       <p>
+       Relative positioning is used to position an object relative to where it otherwise would have been.  For example if you have an image on your page and think 'I'd like that image to be 20pixels further to the left' you could use the following code:
+       </p>
+       <p class="codesegment">
+        .image {
+        position:relative;
+        left:20px;
+        }
+       </p>
+       <p>
+        This would move your image 20pixels to the left but be careful! If an adjustment you make later on to another object changes the default position of your image it will then be positioned 20 pixels to left of that new default position.  In this way having too many relative positioned objects on a page can result in horrible knock-on effects whereby you move one object and suddenly everything else on your page is no-longer where you put it.  
+       </p>
+       <h4>Absolute</h4>
+       <p>
+         Absolute Positioning positions objects relative to their nearest 'positioned' ancestor.  For example if you have some text within a div that is positioned absolute positioning will position the text relative to that div.  Note if the div has a 'static' position it is considered 'unpositioned' and the text will be positioned relative to it's next ancestor.   If there are no positioned ancestors it will be poisoned relative to the page itself.   Absolute positioning is the what I find myself using the most because it provides a stable predictable position for your object.  It is particularly useful for positioning the primary objects on your page that have no ancestors other than the html.  For example if you have a header with no ancestors and you give it the following position property it will always be right at the top of your page regardless of the positions of other objects. 
+       </p>
+       <p class="codesegment">
+         header {
+    position:absolute;
+    top: 0px;
+}
+       </p>
+       <h4>Fixed</h4>
+       <p>
+        Fixed positioning is used to position objects relative to the browser window.  Fixed objects will remain stationary when the page is scrolled.  For example if you assign a div the following position:
+       </p>
+       <p class="codesegment">
+        .div {
+    position:fixed;
+    top:100px;
+    right:100px;   
+}
+       </p>
+       <p>
+        This div will ALWAYS be 100px from the top of your browser window and 100px from the right regardless how much you scroll or resize the window.   This can be useful for things like tool-bars that you want to be immediately available to the user regardless of where they are on the page.
+       </p>
+
+       <p>
+         I hope this article has helped give you a better understanding of how positioning works in CSS.  As you can see it is fairly simple in theory although you will no doubt discover that in practice positioning things can be both frustrating and baffling.  Remember to be patient and practice good <a href="https://peterlowe42.github.io/blog/git.html">version control</a> and you'll eventually stumble your way through the minefield of CSS.  Hopefully with all your limbs and your sanity intact.  Good luck.... 
        </p>
     </section>   
-   </div>    
+  </div>    
 </body>
 </html>
 
