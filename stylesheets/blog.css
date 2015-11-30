@@ -8,7 +8,7 @@
 	letter-spacing: 0;
 }
 #content {
-	position:absolute;
+	
 	font-family: 'Roboto', 'sans serif';
 	font-size: 1.5em;
 	position:absolute;
@@ -56,5 +56,5 @@
 #navbar {
 	position:absolute;
 	top:40px;
-	right:30px;
+	right:100px;
 }
