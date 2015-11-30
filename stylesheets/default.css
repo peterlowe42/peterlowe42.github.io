@@ -1,5 +1,9 @@
-body {
-	
+#wrapper{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
     background-image: url(https://github.com/peterlowe42/peterlowe42.github.io/blob/master/stylesheets/imgs/Turlte.jpg?raw=true);
 	background: #0090BD;
 }
@@ -11,23 +15,24 @@ header {
    color:white;
    font-family: 'Patua One', 'sans serif';
    background:#005670;
-   padding:10px;
-   width:100%;
+   width:1900px;
    position:absolute;
    top:0px;
    left:0px;
+   min-height: 80px;
 }
 
 
 
 .title {
-
+    width:1800px;
 	font-size: 3.5em;
 	letter-spacing: 0.3em;
 
 }
 
 .subtitle {
+	   width:1800px;
        font-size: 1.5em;
        letter-spacing: 0.2em;
 }
@@ -36,7 +41,8 @@ header {
 	font-family: 'Roboto', 'Sans serif';
 	font-size:1.8em;
 	position: absolute;
-	left:340px;
+	left:380px;
+	width: 1200px;
 
 }
 
@@ -52,9 +58,11 @@ header {
 }
 
 #content {
+
 	position:absolute;
-	top:200px;
-   padding:10px;
+    width: 1830px;
+	top:150px;
+    
   
  
 }
@@ -78,6 +86,9 @@ footer > a {
 }
 
 #buttons {
+	position:absolute;
+	top:100px;
+	width:1830px;
 	margin-top:100px;
 	margin-bottom: 100px;
     vertical-align: middle;
@@ -115,6 +126,7 @@ section > a:hover {
 }
 
 section > select:hover {
+
 	color:#700000;
 }
 

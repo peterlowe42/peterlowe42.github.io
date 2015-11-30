@@ -3,14 +3,22 @@
 <head>
     <title>Technical Blog</title>
     <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="your-stylesheet-link-here.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+    <link href='https://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  
 </head>
     
 <body>
+
+  <div id="wrapper"> 
   <header>
-    <h1>Pete's Badass Technical Blog</h1>
-    <a href="https://peterlowe42.github.io/blog/index.html">Home</a>
-    <select onChange="window.location.href=this.value">
+    <h1 class="title">Pete's Badass Technical Blog</h1>
+
+    <section id="navbar">
+    <a class="navbutton" href="https://peterlowe42.github.io/blog/index.html">Home</a>
+    <select class="navbutton" onChange="window.location.href=this.value">
         <option value="">Topics</option>
         <option value="https://peterlowe42.github.io/blog/git.html">Version Control</option>
         <option value="">Topic 2</option>
@@ -20,12 +28,14 @@
         <option value="https://peterlowe42.github.io/blog/">Topic 6</option>
         <option value="https://peterlowe42.github.io/blog/">Topic 7</option>
     </select>
+  </section>
   </header>
 
-    <h2>Version Control with Git and GitHub</h2>
-    <img src="http://gordondickens.com/images/github-logo.png"/>
-    <h3>11/15/2015</h3>
+    <div id="post-title"><h2>Version Control with Git and GitHub</h2></div>
+    <img id="image" src="http://gordondickens.com/images/github-logo.png"/>
+    <div id="date"><h3>11/15/2015</h3></div>
 
+    <section id="content">
     <h4>What is version control and why use it?</h4>
 
     <p>
@@ -54,6 +64,9 @@
         GitHub is an online service designed for storing and sharing Git repositories. As well as providing a useful backup uploading to GitHub also allows you to share your code with others. It is particularly useful when several coders are working together on a single project. If you have a repository on GitHub for a joint project each coder can clone this repository to their own machine and work on whatever aspect of the project they have been tasked with before uploading the updated files to GitHub for approval. Once these files have been reviewed they can be merged back into the main repository. With this system each member of the team can be working on different aspects of the project simultaneously without corrupting the original files. 
 
     </P>
+  </section>
+
+  </div>
 </body>
 </html>
 
