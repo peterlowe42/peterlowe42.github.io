@@ -7,6 +7,13 @@
 .title {
 	letter-spacing: 0;
 }
+
+.intro {
+	position:absolute;
+	top:150px;
+	left:400px;
+	width:1300px;
+}
 #content {
 	
 	font-family: 'Roboto', 'sans serif';
@@ -48,8 +55,8 @@
 .navbutton {
 	font-size: 1.5em;
 	border:none;
+	width:150px; 
 	display: inline-block;
-	width:100px;
 	background-color: #005670;
 }
 
@@ -57,4 +64,32 @@
 	position:absolute;
 	top:40px;
 	right:100px;
+}
+
+#sidebar {
+
+	padding-top: 300px;
+	min-height: 100%;
+	width:300px;
+	background: #297188;
+}
+.sideitem {
+	text-align: center;
+	line-height: 2em;
+	color: black;
+	text-decoration: none;
+	font-family: 'Patua One', 'sans serif';
+	font-size: 2em;
+}
+
+a:visited {
+	color: #703900
+}
+
+a:hover {
+	color: #700000
+}
+
+aside > ul {
+	list-style-type: none;
 }
