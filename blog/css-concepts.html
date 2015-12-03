@@ -12,7 +12,7 @@
   <div id="wrapper"> 
     <header>
       <h1 class="title">Pete's Badass Technical Blog</h1>
-      <section id="navbar">
+      <nav id="navbar">
       <a class="navbutton" href="https://peterlowe42.github.io/blog/index.html">Home</a>
       
       <select class="navbutton" onChange="window.location.href=this.value">
@@ -25,7 +25,7 @@
           <option value="https://peterlowe42.github.io/blog/">Topic 6</option>
           <option value="https://peterlowe42.github.io/blog/">Topic 7</option>
       </select>
-      </section>
+      </nav>
     </header>
     
       <div id="post-title"><h2>CSS Positioning</h2></div>
@@ -49,11 +49,13 @@
        <p>
        Relative positioning is used to position an object relative to where it otherwise would have been.  For example if you have an image on your page and think 'I'd like that image to be 20pixels further to the left' you could use the following code:
        </p>
-       <p class="codesegment">
+       <p>
+        ```ruby
         .image {
         position:relative;
         left:20px;
         }
+        ```
        </p>
        <p>
         This would move your image 20pixels to the left but be careful! If an adjustment you make later on to another object changes the default position of your image it will then be positioned 20 pixels to left of that new default position.  In this way having too many relative positioned objects on a page can result in horrible knock-on effects whereby you move one object and suddenly everything else on your page is no-longer where you put it.  
