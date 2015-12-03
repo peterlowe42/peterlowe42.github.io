@@ -33,7 +33,8 @@
 
       <div id="date"><h3>11/30/15</h3></div>
 
-      <section id="content">
+      <section id="main">
+      
       <p>
         If you're looking at the image above and thinking 'Wait, why would you use an image of such poorly aligned things in an article about positioning?' then clearly you have yet to experience the bittersweet joys of CSS.   If this is indeed your first venture into the world of CSS positioning then know this, it will NOT be easy.  In-fact you're likely to give serious consideration to setting fire to your computer and running away to live a tech free life in the forest  before all this is over.   Rest assured though, CSS has been used to style practically every page on the web for a good fifteen years now and despite it's awkward and fiddly nature it really does work once you get the hang of it.   
       </p>
@@ -49,14 +50,18 @@
        <p>
        Relative positioning is used to position an object relative to where it otherwise would have been.  For example if you have an image on your page and think 'I'd like that image to be 20pixels further to the left' you could use the following code:
        </p>
-       <p>
-        ```ruby
-        .image {
-        position:relative;
-        left:20px;
+      
+      <pre class="code">
+        <code>
+        <span class="red">image</span> {
+           <span class="blue">position</span>:<span class="blue">relative</span>;
+           <span class="blue">left</span>:<span class="purple">20</span><span class="red">px</span>;
         }
-        ```
-       </p>
+      </code>
+      </pre>  
+       
+
+     
        <p>
         This would move your image 20pixels to the left but be careful! If an adjustment you make later on to another object changes the default position of your image it will then be positioned 20 pixels to left of that new default position.  In this way having too many relative positioned objects on a page can result in horrible knock-on effects whereby you move one object and suddenly everything else on your page is no-longer where you put it.  
        </p>
@@ -64,22 +69,27 @@
        <p>
          Absolute Positioning positions objects relative to their nearest 'positioned' ancestor.  For example if you have some text within a div that is positioned absolute positioning will position the text relative to that div.  Note if the div has a 'static' position it is considered 'unpositioned' and the text will be positioned relative to it's next ancestor.   If there are no positioned ancestors it will be poisoned relative to the page itself.   Absolute positioning is the what I find myself using the most because it provides a stable predictable position for your object.  It is particularly useful for positioning the primary objects on your page that have no ancestors other than the html.  For example if you have a header with no ancestors and you give it the following position property it will always be right at the top of your page regardless of the positions of other objects. 
        </p>
-       <p class="codesegment">
-         header {
-    position:absolute;
-    top: 0px;
-}
-       </p>
+       <pre class="code">
+        <code>
+         <span class="red">header</span> {
+           <span class="blue">position</span>:<span class="blue">absolute</span>;
+           <span class="blue">top</span>: <span class="purple">0</span><span class="red">px</span>;
+         }
+        </code>
+      </pre>
        <h4>Fixed</h4>
        <p>
         Fixed positioning is used to position objects relative to the browser window.  Fixed objects will remain stationary when the page is scrolled.  For example if you assign a div the following position:
        </p>
-       <p class="codesegment">
-        .div {
-    position:fixed;
-    top:100px;
-    right:100px;   
-}
+       <pre class="code">
+        <code>
+        <span class="red">div</span> {
+          <span class="blue">position</span>:<span class="blue">fixed</span>;
+          <span class="blue">top</span>:<span class="purple">100</span><span class="red">px</span>;
+          <span class="blue">right</span>:<span class="purple">100</span><span class="red">px</span>;   
+        }
+       </code>
+      </pre>
        </p>
        <p>
         This div will ALWAYS be 100px from the top of your browser window and 100px from the right regardless how much you scroll or resize the window.   This can be useful for things like tool-bars that you want to be immediately available to the user regardless of where they are on the page.
