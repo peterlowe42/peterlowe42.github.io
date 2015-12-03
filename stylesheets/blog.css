@@ -1,8 +1,8 @@
 #wrapper {
 	position:absolute;
-	min-height:100%;
+
 	min-width:100%;
-	height: 1900px;
+	height: auto;
 }
 
 .title {
@@ -15,22 +15,44 @@
 	left:400px;
 	width:1300px;
 }
-#content {
-	
+
+#main {
+    margin-top: 18em;
+	margin-left:4em;
 	font-family: 'Roboto', 'sans serif';
 	font-size: 1.5em;
-	position:absolute;
-	width:1750px;
+	text-indent: 2em;
+	width:1600px;
 	top:380px;
 	left:50px;
     padding:10px;
 }
 
-.codesegment {
+.code {
 	background-color:#AFBBBD;
-	width:600px;
+	width:500px;
+	border:2px solid black;
 }
 
+code {
+	position:relative;
+	right:60px;
+}
+
+.red {
+	color:#C20B42;
+}
+
+.purple {
+	color:#A30DC2;
+}
+
+.blue {
+	color:#005B8A;
+}
+.green {
+	color:#00B52C;
+}
 #post-title {
 	position:absolute;
 	left:380px;
