@@ -16,4 +16,4 @@ What aspects of your design did you find easiest to implement? What was most dif
 
 What did you learn about adding and formatting elements with CSS in this challenge?
 
-  It is a tedious and horrible process but if you stick at and apease the proper deitys it evenually you'll eventually reach a result that is at least close to what you wanted. Also it really helps if you included proper divs in your HTML from the start. 
+  It is a tedious and horrible process but if you stick at and apease the proper deitys you'll eventually reach a result that is at least close to what you wanted. Also it really helps if you included proper divs in your HTML from the start. 
