@@ -1,13 +1,3 @@
-#wrapper{
-    position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height: 100%;
-    background-image: url(https://github.com/peterlowe42/peterlowe42.github.io/blob/master/stylesheets/imgs/Turlte.jpg?raw=true);
-	background: #0090BD;
-}
-
 header {
 
    line-height: 0.3;
@@ -22,6 +12,43 @@ header {
    min-height: 80px;
 }
 
+footer > a {
+	text-decoration: none;
+	font-family:'Roboto';
+	position:absolute;
+	left:20px;
+	bottom:40px;
+}
+
+nav > a {
+	text-decoration: none;
+	color:black;
+}
+
+nav > a:visited {
+	color:#703900;
+
+}
+
+nav > a:hover {
+	color:#700000;
+}
+
+nav > select:hover {
+
+	color:#700000;
+}
+
+
+.wrapper{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background-image: url(https://github.com/peterlowe42/peterlowe42.github.io/blob/master/stylesheets/imgs/Turlte.jpg?raw=true);
+	background: #0090BD;
+}
 
 
 .title {
@@ -46,7 +73,7 @@ header {
 
 }
 
-#mypic {
+.mypic {
 	border:4px solid black;
 	border-radius: 20px;
 	position:absolute;
@@ -57,7 +84,7 @@ header {
     box-shadow: 10px 10px 10px #12353B;
 }
 
-#content {
+.content {
 
 	position:absolute;
     width: 1830px;
@@ -67,7 +94,7 @@ header {
  
 }
 
-#foot {
+.foot {
    position:absolute;
    bottom:0;
    left:0;
@@ -76,16 +103,8 @@ header {
    background:#005670;
 }
 
-footer > a {
-	text-decoration: none;
-	font-family:'Roboto';
-	position:absolute;
-	left:20px;
-	bottom:40px;
 
-}
-
-#buttons {
+.buttons {
 	position:absolute;
 	top:100px;
 	width:1830px;
@@ -111,24 +130,7 @@ footer > a {
 	box-shadow: 10px 10px 10px #12353B;
 } 
 
-section > a {
-	text-decoration: none;
-	color:black;
-}
 
-section > a:visited {
-	color:#703900;
-
-}
-
-section > a:hover {
-	color:#700000;
-}
-
-section > select:hover {
-
-	color:#700000;
-}
 
 
 
@@ -137,7 +139,7 @@ section > select:hover {
 	padding:20px;
 }
 
-#smlinks {
+.smlinks {
 	position:absolute;
 	bottom:0px;
 	right:0px;

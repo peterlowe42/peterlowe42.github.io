@@ -2,50 +2,57 @@
 <html>
 <head>
     <title>Technical Blog</title>
-    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
     <link href='https://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+   
     
 </head>
   <body>
-  <div id="wrapper"> 
-    <header>
-      <h1 class="title">Pete's Badass Technical Blog</h1>
-      <section id="navbar">
-      <a class="navbutton" href="https://peterlowe42.github.io/blog/index.html">Home</a>
+    <div class="wrapper"> 
       
-      <select class="navbutton" onChange="window.location.href=this.value">
+      <header>
+        <h1 class="title">Pete's Badass Technical Blog</h1>
+        <nav class="navbar">
+        <a class="navbutton" href="https://peterlowe42.github.io/blog/index.html">Home</a>
+       
+        <select class="navbutton" onChange="window.location.href=this.value">
           <option value="">Topics</option>
           <option value="https://peterlowe42.github.io/blog/git.html">Version Control</option>
           <option value="https://peterlowe42.github.io/blog/css-concepts.html">CSS Postioning</option>
-          <option value="https://peterlowe42.github.io/blog/">Topic 3</option>
+          <option value="https://peterlowe42.github.io/blog/arrays-hashes.html">Arrays and Hashes</option>
           <option value="https://peterlowe42.github.io/blog/">Topic 4</option>
           <option value="https://peterlowe42.github.io/blog/">Topic 5</option>
           <option value="https://peterlowe42.github.io/blog/">Topic 6</option>
           <option value="https://peterlowe42.github.io/blog/">Topic 7</option>
-      </select>
-      </section>
-    </header>
+        </select>
+       </nav>
+      </header>
     
-      id="post-title"<h2>Blog post title</h2></div>
-      <img id="image" src="https://s-media-cache-ak0.pinimg.com/236x/cd/4b/4f/cd4b4fef88d00738f3a5390f37262417.jpg"/>
+      <div class="post-title"><h2>Blog post title</h2></div>
 
-      <div id="date"><h3>MM/DD/YYYY</h3></div>
+      <img class="image" src="https://s-media-cache-ak0.pinimg.com/236x/cd/4b/4f/cd4b4fef88d00738f3a5390f37262417.jpg"/>
 
-      <section id="main">
-      <p>
-        Paragraph 1
-      </p>
-      <p>
-        Paragraph 2
-      </p>
-      <p>
-        Paragraph 3
-       </p>
-    </section>   
-   </div>    
-</body>
+      <div class="date"><h3>MM/DD/YYYY</h3></div>
+
+      <main class="main">
+      
+        <p>
+          Paragraph 1
+        </p>
+      
+        <p>
+          Paragraph 2
+        </p>
+      
+        <p>
+          Paragraph 3
+        </p>
+        
+      </main>   
+    </div>    
+  </body>
 </html>
 
 <!-- 

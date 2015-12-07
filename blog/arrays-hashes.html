@@ -2,76 +2,88 @@
 <html>
 <head>
     <title>Technical Blog</title>
-    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
     <link href='https://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+        
 </head>
+
   <body>
-  <div id="wrapper"> 
+
+  <div class="wrapper"> 
+
     <header>
+
       <h1 class="title">Pete's Badass Technical Blog</h1>
-      <section id="navbar">
-      <a class="navbutton" href="https://peterlowe42.github.io/blog/index.html">Home</a>
+
+      <section class="navbar">
+        <a class="navbutton" href="https://peterlowe42.github.io/blog/index.html">Home</a>
       
-      <select class="navbutton" onChange="window.location.href=this.value">
+        <select class="navbutton" onChange="window.location.href=this.value">
           <option value="">Topics</option>
           <option value="https://peterlowe42.github.io/blog/git.html">Version Control</option>
           <option value="https://peterlowe42.github.io/blog/css-concepts.html">CSS Postioning</option>
-          <option value="https://peterlowe42.github.io/blog/">Topic 3</option>
+          <option value="http://peterlowe42.github.io/blog/arrays-hashes.html">Arrays and Hashes</option>
           <option value="https://peterlowe42.github.io/blog/">Topic 4</option>
           <option value="https://peterlowe42.github.io/blog/">Topic 5</option>
           <option value="https://peterlowe42.github.io/blog/">Topic 6</option>
           <option value="https://peterlowe42.github.io/blog/">Topic 7</option>
-      </select>
+        </select>
       </section>
     </header>
     
-      <div id="post-title"><h2>Arrays and Hashes</h2></div>
-      <img id="image" src="../stylesheets/imgs/ray'n'hashes.jpg"/>
+      <div class="post-title"><h2>Arrays and Hashes</h2></div>
+      <img class="image" src="../stylesheets/imgs/ray'n'hashes.jpg"/>
 
-      <div id="date"><h3>05/12/15</h3></div>
+      <div class="date"><h3>05/12/15</h3></div>
 
-      <section id="main">
-      <p>
-        This post will attempt to define and compare arrays and hashes in programming languages.  All the code and specific syntax I use will be for hashes and arrays in ruby but the basic concepts apply to many other languages.
-      </p>
-      <h2>What are Arrays?</h2>
-      <p>
-       Arrays are essentially containers for many items of data.  They can contain numbers, words, symbols basically anything you might want a computer program to remember can be stored in an array.   You can add and remove items as you see fit.  In ruby arrays are represented by square brackets with each individual element inside separated by commas e.g [2,4,5,3].   Each element in the array is assigned an index number starting from 0 and can be called by typing array_name[index_num].  For example consider an array 'planets' containing the names of the planets in the solar system in order of distance form the sun.
-      </p>
-      <pre class="code">
-        <code>
-          planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune', 'Pluto']
-        </code>
-      </pre>
-      <p class="caption">
-        (I don't care what the haters say Pluto will always be a planet to me)
+      <section class="main">
+      
+        <p>
+          This post will attempt to define and compare arrays and hashes in programming languages.  All the code and specific syntax I use will be for hashes and arrays in ruby but the basic concepts apply to many other languages.
+        </p>
+      
+        <h2>What are Arrays?</h2>
+      
+        <p>
+          Arrays are essentially containers for many items of data.  They can contain numbers, words, symbols basically anything you might want a computer program to remember can be stored in an array.   You can add and remove items as you see fit.  In ruby arrays are represented by square brackets with each individual element inside separated by commas e.g [2,4,5,3].   Each element in the array is assigned an index number starting from 0 and can be called by typing array_name[index_num].  For example consider an array 'planets' containing the names of the planets in the solar system in order of distance form the sun.
+        </p>
+      
+        <pre class="code">
+          <code>
+            planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune', 'Pluto']
+          </code>
+        </pre>
+      
+        <p class="caption">
+          (I don't care what the haters say Pluto will always be a planet to me)
+        </p>
+        
+        <p>In this array 'Mercury' has position 0 and Earth has position 2.  Starting to count from 0 may seem strange at first but you get used to it.  If you wanted to print the 5th planet from the sun (Jupiter) you would type
+        </p>
+       
+        <pre class="code">
+         <code>
+           puts planets[4]    # => Jupiter
+         </code>
+        </pre>
+      
+        <p class="caption">
+          Note '4' is the index number for the fifth element in the array.
+        </p>
+      
+        <h2>What are Hashes?</h2>
+      
+        <p>
+          Arrays are great but you may have noticed that you can only call a specific element from an array if you know what order they appear in.  What if you want to store a large number of items in no specific order and still be able to find the one you want. This is where hashes come in.  Hashes are a lot like arrays but instead of index numbers each 'value' is assigned a 'key' and as long as you know the name of that key you can call the value you want without having to know where it appears in the hash.  
+        </p>
+      
+        <p>
+          For example if you wanted to store a list of super heroes powers a hash would be perfect.  You could use the name of the super hero as the 'key' and their power as the 'value'.  You'd write it like this
        </p>
-       <p>In this array 'Mercury' has position 0 and Earth has position 2.  Starting to count from 0 may seem strange at first but you get used to it.  If you wanted to print the 5th planet from the sun (Jupiter) you would type
-       </p>
-       <pre class="code">
-        <code>
-          puts planets[4]    # => Jupiter
-        </code>
-      </pre>
       
-      <p class="caption">
-        Note '4' is the index number for the fifth element in the array.
-      </p>
-      
-      <h2>What are Hashes?</h2>
-      
-      <p>
-        Arrays are great but you may have noticed that you can only call a specific element from an array if you know what order they appear in.  What if you want to store a large number of items in no specific order and still be able to find the one you want. This is where hashes come in.  Hashes are a lot like arrays but instead of index numbers each 'value' is assigned a 'key' and as long as you know the name of that key you can call the value you want without having to know where it appears in the hash.  
-      </p>
-      
-      <p>
-        For example if you wanted to store a list of super heroes powers a hash would be perfect.  You could use the name of the super hero as the 'key' and their power as the 'value'.  You'd write it like this
-      </p>
-      
-      <pre class="code">
+        <pre class="code">
         <code>
           super_powers = {
              'Spider-man' => 'Does whatever a spider can'
@@ -81,48 +93,28 @@
              'Prof. X' => 'Telpathy'
         }
         </code>
-      </pre>
+        </pre>
       
-      <p>
-        Now if you want to print the Hulk's power you could just type:
-      </p>
+        <p>
+          Now if you want to print the Hulk's power you could just type:
+        </p>
 
-      <pre class="code">
-        <code>
-          puts super_powers[Hulk]    # => Turns into giant green rage monster
-        </code>
-      </pre>
-      <p>
-        You could do the same with any of the super-heroes in the hash without having to know the order in which they appear.  Another great thing you can do with hashes is assign a default value that will be returned if you attempt to look up a key that is not in the hash. 
-      </p>
+        <pre class="code">
+          <code>
+            puts super_powers[Hulk]    # => Turns into giant green rage monster
+          </code>
+        </pre>
 
-      <p>
-        I hope this has helped to explain the concepts of arrays and hashes and why you might want to use them. Happy coding..... 
-      </p>
+        <p>
+          You could do the same with any of the super-heroes in the hash without having to know the order in which they appear.  Another great thing you can do with hashes is assign a default value that will be returned if you attempt to look up a key that is not in the hash. 
+        </p>
+
+        <p>
+          I hope this has helped to explain the concepts of arrays and hashes and why you might want to use them. Happy coding..... 
+        </p>
 
     </section>   
-   </div>    
+  </div>    
 </body>
 </html>
 
-<!-- 
-How was it to wireframe and create an HTML page with a pair?
-
-  We didn't do that much wireframing during the exercise I already had an outline sketched out and we pretty much just went of that. I think for me at least wireframing as a pair would work much better in person with a witeboard or flipchart to brainstorm on. I enjoyed writing the HTML as a pair. I was driving for most of the exercise and there were a few times when Lyndsy spotted errors in my code right away that I don't think I would have noticed if I was coding alone.  This was pretty cool and really made it clear why pair coding is so popular in the industry. 
-
-Did you find wireframing to be helpful to your development process?
-
-   Yes. Wireframing gives a clear idea of what you're trying to build. We referred back to my wireframe several times during the process to make sure we were adding all the elements we needed. 
-
-What did you and your pair decide made a good wireframe? 
-
-    A wireframe should be clear and simple and that it should be imediately obvious to any web user what everything in the wireframe is/does. 
-
-What new semantic elements did you learn about (if any)?
-    
-    I didn't learn any new elements in this exercise. But I did re-use the dropdown menu code that I learned in my solo challenge. 
-
-
-A scan of my wireframe sketch can be found here : https://github.com/peterlowe42/phase-0/blob/master/week-2/imgs/Wireframe-blog.jpg
-
-    --> 
