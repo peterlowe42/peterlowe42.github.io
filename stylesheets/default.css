@@ -39,6 +39,46 @@ nav > select:hover {
 	color:#700000;
 }
 
+form {
+	margin:auto;
+	margin-top: 200px;
+	width:600px;
+	padding:20px;
+	border:2px solid black;
+	border-radius: 20px;
+
+}
+
+form div + div {
+	margin:20px;
+}
+
+label {
+	font-family: 'Roboto';
+	font-size: 1.3em;
+    display: inline-block;
+    width: 100px;
+	text-align: right;
+}
+
+input, textarea {
+	font-family: 'Roboto';
+	font-size: 1em;
+	width: 400px;
+	border:1px solid black;
+}
+
+textarea {
+	height: 200px;
+	vertical-align: top;
+}
+
+button {
+	margin-left: 110px;
+	font-family: 'Roboto';
+	font-size: 1.3em
+
+}
 
 .wrapper{
     position: absolute;
@@ -66,7 +106,7 @@ nav > select:hover {
 
 .intro {
 	font-family: 'Roboto', 'Sans serif';
-	font-size:1.8em;
+	font-size:1.5em;
 	position: absolute;
 	left:380px;
 	width: 1200px;
@@ -95,7 +135,7 @@ nav > select:hover {
 }
 
 .foot {
-   position:fixed;
+   position:absolute;
    bottom:0;
    left:0;
    width:100%;
@@ -144,4 +184,9 @@ nav > select:hover {
 	bottom:0px;
 	right:0px;
 
+}
+
+.name {
+	position: relative;
+	left:20px;
 }
