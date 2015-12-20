@@ -129,9 +129,21 @@ button {
 	position:absolute;
     width: 1830px;
 	top:150px;
-    
   
+  
+  
+}
+
+.content > p {
+	font-family: 'Roboto';
+  	font-size: 1.5em;
+	margin-left: 3em;
  
+}
+
+.first_p {
+   margin-top: 8em;
+    
 }
 
 .foot {
