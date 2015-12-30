@@ -19,6 +19,7 @@ aside > ul {
 	position:absolute;
 	min-width:100%;
 	height: auto;
+	min-height: 100%;
 }
 
 .title {
@@ -27,7 +28,7 @@ aside > ul {
 
 .intro {
 	position:absolute;
-	height: 100%;
+	
 	top:150px;
 	left:400px;
 	width:1300px;
@@ -110,7 +111,7 @@ aside > ul {
 .sidebar {
 
 	padding-top: 300px;
-	min-height: 100%;
+	height: 100%;
 	width:300px;
 	background: #297188;
 }
