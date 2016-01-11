@@ -1,0 +1,38 @@
+h2 {
+	font-family: 'Roboto';
+}
+
+p.introduction {
+    position: absolute;
+    top: 6em;
+    left: 3em;
+    text-indent: 1.5em;
+    font-family: 'Patua one';
+    font-size: 1.1em;
+}
+
+section.definitions {
+    position: absolute;
+    top: 15em;
+    left: 3em;
+}
+
+section.left_column {
+    position: absolute;
+    top: 24em;
+    left: 3em;
+}
+
+section.right_column {
+    position: absolute;
+    top: 24em;
+    left: 45em;
+}
+.code {
+	background-color:#AFBBBD;
+	width:auto;
+	border:2px solid black;
+	padding: 1em;
+
+}
+
