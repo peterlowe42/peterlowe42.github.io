@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Ruby Enumerable Cheat Sheet</title>
+	<link href='https://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/cheatsheet.css">
+</head>
+<body>
+	<header>
+	  <h1>Handy Enumerable Methods for The Ruby Beginner</h1>
+	</header>
+	<div id = "wrapper">
+		<p class = "introduction">
+			Ruby has a huge range of handy methods contained in the Enumerable module. These methods can be called on any collection object including arrays, hashes, ranges and sets. As a ruby beginner by far the most common collection objects you will be working with will be arrays and hashes so this cheat sheet will focus on these.  All the Enumerable methods are based on '.each' which simply iterates through the collection and passes each item to a code block, '.each' does not do anything with the results of this code block unless specificly told to.  In the box below I have designed an array of numbers an array of words and a hash.  Below that is a handy table showing you what several of the most common enumerable methods do.  The method calls are shown on the left and the results are on the left. 
+		</p>
+		<section class = 'definitions'>
+		<h2>Variable Definitions</h2>
+		<code><pre class = "code">
+  nums = [2,3,4,1,6,9,10,8,5,7]
+  words = ["superman","is","boring","and","lame"]
+  hash = {england:"London", fance:"Paris", germany:"Berlin", spain:"Madrid"}
+		</code></pre>	
+	    </section>
+		<section class = "left_column">
+			<h2>Method Calls</h2>
+			
+			<code><pre class = "code">	
+  result = []
+  nums.each {|i| result.push(i+1)}	   		
+			</pre></code>
+				
+				<pre class = "code">
+				<code>
+  nums.map {|i| i*2}
+
+  words.map {|word| word.upcase}
+
+  hash.map {|key,value| "#{value} - #{key.capitalize}"}
+			    </code>
+				</pre>
+
+				<pre class = "code"><code>
+  nums.select {|num| num.even?}
+
+  words.select {|word| word.length > 4}
+
+  hash.select {|key,value| value.length > 5
+				</code></pre>
+
+				<pre class = "code"><code>
+  nums.max
+
+  nums.max(2)
+
+  words.max {|a,b| a.length <=> b.length}
+				</code></pre>
+				
+                <pre class = "code"><code>
+  nums.min
+
+  nums.minmax
+				</code></pre>
+
+				<pre class = "code"><code>
+  nums.sort
+
+  words.sort
+
+  words.sort_by {|word| word.length}
+				</code></pre>
+				
+
+			
+		</section>
+
+		<section class = "right_column">
+			<h2>Results</h2>
+			
+				<pre class = "code"><code><code>
+  => [2,3,4,1,6,9,10,8,5,7]
+  result = [3, 4, 5, 2, 7, 10, 11, 9, 6, 8]
+  # Note that.each returns the origional array. The results had to be added to a seperate array. 
+				</code></pre>
+				<pre class = "code"><code><code>
+  => [4, 6, 8, 2, 12, 18, 20, 16, 10, 14]
+  # Unlike .each .map returns a new array containing the results of the code block.
+  => ["SUPERMAN", "IS", "BORING", "AND", "LAME"] 
+
+  => ["London - England", "Paris - Fance", "Berlin - Germany", "Madrid - Spain"]
+				</code></pre>
+
+				<pre class = "code"><code><code>
+  => [2, 4, 6, 10, 8] 
+  # .select returns a new array with all the values for which the code block evaluates to ture
+  => ["superman", "boring"] 
+
+  => {:england=>"London", :germany=>"Berlin", :spain=>"Madrid"} 
+				</code></pre>
+
+				<pre class = "code"><code><code>
+  => 10 
+  # returns the maximin value
+  =>[10, 9]
+  
+  =>"superman" 
+				</code></pre>
+
+				<pre class = "code"><code><code>
+  => 1 
+  
+  => [1, 10] 
+				</code></pre>
+				
+				<pre class = "code"><code><code>
+  => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+
+  => ["and", "boring", "is", "lame", "superman"] 
+  # by default .sort sorts strings based on their starting letter.
+  => ["is", "and", "lame", "boring", "superman"] 
+				</code></pre>
+			
+		
+		</section>
+    
+
+	</div>
+    
+</body>
+</html>.
