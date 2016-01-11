@@ -6,6 +6,7 @@ p.introduction {
     position: absolute;
     top: 6em;
     left: 3em;
+    right: 3em;
     text-indent: 1.5em;
     font-family: 'Patua one';
     font-size: 1.1em;
@@ -19,13 +20,13 @@ section.definitions {
 
 section.left_column {
     position: absolute;
-    top: 24em;
+    top: 26em;
     left: 3em;
 }
 
 section.right_column {
     position: absolute;
-    top: 24em;
+    top: 26em;
     left: 45em;
 }
 .code {
