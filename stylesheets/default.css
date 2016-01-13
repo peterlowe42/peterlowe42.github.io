@@ -1,20 +1,21 @@
 header {
 
-   line-height: 0.3;
-   text-align: center;
-   color:white;
-   font-family: 'Patua One', 'sans serif';
-   background:#005670;
-   width:100%;
-   position:absolute;
-   top:0px;
-   left:0px;
-   min-height: 80px;
+    line-height: 0.3;
+    text-align: center;
+    color: white;
+    font-family: 'Patua One', 'sans serif';
+    background-color: rgba(10,13,23,.85);
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    min-height: 80px;
 }
 
 footer > a {
 	text-decoration: none;
 	font-family:'Roboto';
+	color:white;
 	position:absolute;
 	left:20px;
 	bottom:40px;
@@ -23,20 +24,20 @@ footer > a {
 nav > a {
 	text-decoration: none;
 	color:black;
+	margin:.5em;
 }
 
-nav > a:visited {
-	color:#703900;
 
-}
 
 nav > a:hover {
-	color:#700000;
+	 background-color: rgba(28,36,64,1);
+	 box-shadow: 10px 10px 10px rgba(10,13,23,.8);
 }
 
 nav > select:hover {
 
-	color:#700000;
+	 background-color: rgba(28,36,64,1);
+     box-shadow: 10px 10px 10px rgba(10,13,23,.8);
 }
 
 form {
@@ -86,13 +87,16 @@ button {
     left:0;
     width:100%;
     height: 100%;
-  	background: #0090BD;
+    background: #E0E5E8;
+  	
 }
 
 .background_img {
-	position:fixed;
-	top: -60px;
-	width:116em;
+	position: fixed;
+    top: -8.5em;
+    width: 130em;
+    height: 85em;
+ 
 }
 
 .title {
@@ -118,14 +122,14 @@ button {
 }
 
 .mypic {
-	border:4px solid black;
-	border-radius: 20px;
-	position:absolute;
-	top:20px;
-	left:40px;
-	height: 250px;
-	width: 280px;
-    box-shadow: 10px 10px 10px #12353B;
+	border: 4px solid black;
+    border-radius: 20px;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    height: 14em;
+    width: 16em;
+    box-shadow: 10px 10px 10px rgba(10,13,23,.6);
 }
 
 .content {
@@ -151,40 +155,41 @@ button {
 }
 
 .foot {
-   position:absolute;
-   bottom:0;
-   left:0;
-   width:100%;
-   height:100px;  
-   background:#005670;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(10,13,23,.85);
 }
 
 
 .buttons {
-	position:absolute;
-	top:100px;
-	width:1830px;
-	margin-top:100px;
-	margin-bottom: 100px;
-    vertical-align: middle;
+	position: absolute;
+    top: 30em;
+    left:3em;
+    width: 113em;
+  
    	
 }
 
 
 .bigbutton {
-	opacity: 50%;
-	font-family: 'Roboto';
-	font-size: 3em;
-	display:inline;
-	margin:50px;
-	border:6px solid black;
-	border-radius: 50px;
-	padding-left:50px;
-	padding-right: 50px;
-	padding-top: 100px;
-	padding-bottom: 100px;
-	background-color:#297188;
-	box-shadow: 10px 10px 10px #12353B;
+    font-family: 'Patua One';
+    font-size: 3em;
+    color: white;
+    letter-spacing: .1em;
+    display: inline;
+    margin: 30px;
+    border: 6px solid black;
+    border-radius: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: rgba(28,36,64,.9);
+    box-shadow: 10px 10px 10px rgba(10,13,23,.7);
+}
 	
 } 
 
@@ -201,6 +206,7 @@ button {
 	position:absolute;
 	bottom:0px;
 	right:0px;
+	margin:1.5em; 
 
 }
 
