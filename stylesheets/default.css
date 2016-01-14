@@ -47,33 +47,51 @@ form {
 }
 
 form div + div {
-	margin:20px;
+    margin:20px;
 }
 
 label {
-	font-family: 'Roboto';
-	font-size: 1.3em;
+    font-family: 'Roboto';
+    font-size: 1.3em;
     display: inline-block;
     width: 100px;
-	text-align: right;
+    text-align: right;
 }
 
 input, textarea {
-	font-family: 'Roboto';
-	font-size: 1em;
-	width: 400px;
-	border:1px solid black;
+    font-family: 'Roboto';
+    font-size: 1em;
+    width: 400px;
+    border:1px solid black;
 }
 
 textarea {
-	height: 200px;
-	vertical-align: top;
+    height: 200px;
+    vertical-align: top;
 }
 
 button {
-	margin-left: 110px;
-	font-family: 'Roboto';
-	font-size: 1.3em
+    margin-left: 110px;
+    font-family: 'Roboto';
+    font-size: 1.3em
+
+}
+
+.navbar {
+    display: inline;
+    position:absolute;
+    top:2.5em;
+    left: 100em;
+}
+
+.navbutton {
+    text-decoration:none;
+    background-color: rgba(10,13,23,.85);
+    border-style: none;
+    color:white;
+    font-size: 1.5em;
+    padding:.5em;
+    display: inline;
 
 }
 
@@ -86,7 +104,7 @@ button {
 }
 
 .background_img {
-	position: fixed;
+    position: fixed;
     top: -8.5em;
     width: 130em;
     height: 85em;
@@ -95,28 +113,28 @@ button {
 
 .title {
     width:1800px;
-	font-size: 3.5em;
-	letter-spacing: 0.3em;
+    font-size: 3.5em;
+    letter-spacing: 0.3em;
 
 }
 
 .subtitle {
-	   width:1800px;
+       width:1800px;
        font-size: 1.5em;
        letter-spacing: 0.2em;
 }
 
 .intro {
-	font-family: 'Roboto', 'Sans serif';
-	font-size:1.5em;
-	position: absolute;
-	left:380px;
-	width: 1200px;
+    font-family: 'Roboto', 'Sans serif';
+    font-size:1.5em;
+    position: absolute;
+    left:380px;
+    width: 1200px;
 
 }
 
 .mypic {
-	border: 4px solid black;
+    border: 4px solid black;
     border-radius: 20px;
     position: absolute;
     top: 20px;
@@ -128,18 +146,18 @@ button {
 
 .content {
 
-	position:absolute;
+    position:absolute;
     width: 1830px;
-	top:150px;
+    top:150px;
   
   
   
 }
 
 .content > p {
-	font-family: 'Roboto';
-  	font-size: 1.5em;
-	margin-left: 3em;
+    font-family: 'Roboto';
+    font-size: 1.5em;
+    margin-left: 3em;
  
 }
 
@@ -159,12 +177,12 @@ button {
 
 
 .buttons {
-	position: absolute;
+    position: absolute;
     top: 30em;
     left:3em;
     width: 113em;
   
-   	
+    
 }
 
 
@@ -185,11 +203,8 @@ button {
     background-color: rgba(28,36,64,.9);
     box-shadow: 10px 10px 10px rgba(10,13,23,.7);
 }
-	
+    
 } 
-
-
-
 
 
 .social {
