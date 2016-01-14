@@ -1,45 +1,55 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    
-    <title>Technical Blog</title>
-    <link href='https://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
-        
+
+	<title>Pete's Badass Technical Blog</title>
+  <link href='https://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog.css">
+  
 </head>
 
-  <body>
+<body>
+	
+  <div class="wrapper">
 
-  <div class="wrapper"> 
+  <header>
+	  <h1 class="title" >Pete's Badass Technical Blog</h1>
+	
+	  <img class="mypic" src="../stylesheets/imgs/Profile.jpg"/>
+    <nav class="navbar">
+      <a class="navbutton"  href="http://peterlowe42.github.io/index.html">Home Page</a>
+	    <a class="navbutton"  href="http://peterlowe42.github.io/contact">Contact</a>
+	 
+    </nav>   	
+  </header>
+  
 
-    <header>
+  <aside class="sidebar">
+   <h2 class="sideitem" >Blog Post Topics</h2>
+	
+   <ul>
+ 	
+ 	  <li><a class="sideitem"  href="http://peterlowe42.github.io/blog/git.html">Git and GitHub</a></li>
+ 	  <li><a class="sideitem"  href="https://peterlowe42.github.io/blog/css-concepts.html">CSS positioning</a></li>
+ 	  <li><a class="sideitem"  href="http://peterlowe42.github.io/blog/arrays-hashes.html">Arrays and Hashes</a></li>
+ 	  <li><a class="sideitem"  href="http://peterlowe42.github.io/blog/enumerable-methods.html">Learn to map?</a></li>
+ 	  <li><a class="sideitem"  href="http://peterlowe42.github.io/blog/ruby-classes.html">Classy Droids</a></li>
+ 	  <li><a class="sideitem"  href="http://peterlowe42.github.io/blog/JavaScript.html">Endless JavaScript</a></li>
+ 	  <li><a class="sideitem"  href="http://peterlowe42.github.io/blog/tech.html">What Is Rails?</a></li>
+  
+ 	</ul>
+  </aside>
 
-      <h1 class="title">Pete's Badass Technical Blog</h1>
-
-      <section class="navbar">
-        <a class="navbutton" href="https://peterlowe42.github.io/blog/index.html">Home</a>
+     <section class="main">
       
-        <select class="navbutton" onChange="window.location.href=this.value">
-          <option value="">Topics</option>
-           <option value="https://peterlowe42.github.io/blog/git.html">Version Control</option>
-        <option value="https://peterlowe42.github.io/blog/css-concepts.html">CSS Positioning</option>
-        <option value="https://peterlowe42.github.io/blog/arrays-hashes.html">Arrays and Hahses</option>
-        <option value="https://peterlowe42.github.io/blog/enumerable-methods.html">Learn to map?</option>
-        <option value="https://peterlowe42.github.io/blog/ruby-classes.html">Classy Droids</option>
-        <option value="https://peterlowe42.github.io/blog/JavaScript.html">Endless JavaScript</option>
-        <option value="https://peterlowe42.github.io/blog/tech.html">What is Rails?</option>
-        </select>
-      </section>
-    </header>
-    
       <div class="post-title"><h2>Ruby Classes Explained With Droids</h2></div>
       <img class="image" src="../stylesheets/imgs/obi-wan.jpg"/>
 
       <div class="date"><h3>19/12/15</h3></div>
-
-      <section class="main">
+        
         <h2>What is a class?</h2>
         <p>
          Put simply a class is a 'type' of object in ruby.  There are many classes already built into ruby like Array, String, Integer, Hash etc (As you can see class names start with a capita letter).   Every time you create a string in ruby you are creating an instance of the class String.  Each class comes with an bunch of methods that can be called on any instance of that class.  You don't just have to stick with the built in  ruby classes, you can also create your very own custom classes.  
@@ -170,8 +180,8 @@
 
 
 
-    </section>   
-  </div>    
+    </section> 
+
+  </div>
 </body>
 </html>
-
