@@ -103,7 +103,7 @@ aside > ul {
     box-shadow: 10px 10px 10px #12353B;
 }
 
-.navbutton {
+/*.navbutton {
 	text-decoration:none;
 	background:transparent;
 	color:white;
@@ -119,7 +119,7 @@ aside > ul {
 	top:2.5em;
     left: 95em;
 }
-
+*/
 .sidebar {
 	padding-top: 300px;
 	position:fixed;
