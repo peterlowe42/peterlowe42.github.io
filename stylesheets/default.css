@@ -11,18 +11,28 @@ header {
     background-color: rgba(10,13,23,.85);
     width: 100%;
     position: absolute;
-    top: 0px;
-    left: 0px;
+    top: 0em;
+    left: 0em;
     min-height: 80px;
 }
 
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(10,13,23,.85);
+}
+
 footer > a {
-	text-decoration: none;
-	font-family:'Roboto';
-	color:white;
-	position:absolute;
-	left:20px;
-	bottom:40px;
+    
+    text-decoration: none;
+    font-family:'Roboto';
+    color:white;
+    position:absolute;
+    left:20px;
+    bottom:40px;
 }
 
 
@@ -30,73 +40,62 @@ footer > a {
 
 
 .buttons > a:hover {
-	background-color: rgba(28,36,64,1);
-	box-shadow: 10px 10px 10px rgba(10,13,23,.8);
+    background-color: rgba(28,36,64,1);
+    box-shadow: .4em .4em .4em rgba(10,13,23,.8);
 }
 
 
 
 form {
-	margin:auto;
-	margin-top: 200px;
-	width:600px;
-	padding:20px;
-	border:2px solid black;
-	border-radius: 20px;
+    margin:auto;
+    margin-top: 20em;
+    width:60em;
+    padding:2em;
+    border:2px solid black;
+    border-radius: 2em;
 
 }
 
 form div + div {
-    margin:20px;
+    margin:2em;
 }
 
 label {
     font-family: 'Roboto';
     font-size: 1.3em;
     display: inline-block;
-    width: 100px;
+    width: 10em;
     text-align: right;
 }
 
 input, textarea {
     font-family: 'Roboto';
     font-size: 1em;
-    width: 400px;
+    width: 40em;
     border:1px solid black;
 }
 
 textarea {
-    height: 200px;
+    height: 20em;
     vertical-align: top;
 }
 
 button {
-    margin-left: 110px;
+    margin-left: 11em;
     font-family: 'Roboto';
     font-size: 1.3em
 
 }
 
-/*.navbar {
-    display: inline;
-    position:absolute;
-    top:2.5em;
-    left: 100em;
-}
-
-.navbutton {
-    text-decoration:none;
-    background-color: rgba(10,13,23,.85);
-    border-style: none;
-    color:white;
-    font-size: 1.5em;
-    padding:.5em;
-    display: inline;
-
-}*/
 nav > a {
     
     margin:1em;
+}
+.navbar {
+    display: inline;
+    position:absolute;
+    bottom: 2.5em;
+    left:96em;
 }
 .navbutton {
     font-family: 'Patua One';
@@ -105,16 +104,12 @@ nav > a {
     border-style:none;
     color:white;
     font-size: 1.5em;
-    padding:.5em;
+
     display: inline;
 
 }
-
-.navbar {
-    display: inline;
-    position:absolute;
-    bottom: 2.5em;
-    right:3em;
+.menuOption {
+    color: black;
 }
 
 .wrapper{
@@ -134,45 +129,40 @@ nav > a {
 }
 
 .title {
-    width:1800px;
     font-size: 3.5em;
     letter-spacing: 0.3em;
+    margin-left: 12em;
+    width: 10em;
 
 }
 
 .subtitle {
-       width:1800px;
-       font-size: 1.5em;
-       letter-spacing: 0.2em;
+    font-size: 1.5em;
+    margin-left: 34em;
+    width: 10em;
+    letter-spacing: 0.2em;
 }
 
-.intro {
-    font-family: 'Roboto', 'Sans serif';
-    font-size:1.5em;
-    position: absolute;
-    left:380px;
-    width: 1200px;
 
-}
 
 .mypic {
-    border: 4px solid black;
-    border-radius: 20px;
+    border: 2px solid black;
+    border-radius: 2em;
     position: absolute;
-    top: 20px;
-    left: 40px;
+    top: 2em;
+    left: 2em;
     height: 14em;
     width: 16em;
-    box-shadow: 10px 10px 10px rgba(10,13,23,.6);
+    box-shadow: 1em 1em 1em rgba(10,13,23,.6);
 }
 
-.content {
+/*.content {
 
     position:absolute;
     width: 1830px;
     top:150px;
   
-}
+}*/
 
 .textBox {
     font-size: 1.4em;
@@ -182,8 +172,8 @@ nav > a {
     border-radius: 2em;
     position: absolute;
     top: 14em;
-    left: 5em;
-    width: 67em;
+    left: 10%;
+    width: 80%;
     padding: 1em;
     padding-left: 2em;
     padding-right: 2em;
@@ -197,19 +187,10 @@ nav > a {
 }
 
 
-.foot {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    background-color: rgba(10,13,23,.85);
-}
-
 
 .buttons {
     position: absolute;
-    top: 30em;
+    bottom:16em;
     left:3em;
     width: 113em;
   
@@ -224,13 +205,10 @@ nav > a {
     color: white;
     letter-spacing: .1em;
     display: inline;
-    margin: 30px;
+    margin: .5em;
     border: 4px solid black;
-    border-radius: 30px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    border-radius: .5em;
+    padding: 1em;
     background-color: rgba(28,36,64,.9);
     box-shadow: 10px 10px 10px rgba(10,13,23,.7);
 }
@@ -240,10 +218,10 @@ nav > a {
 
 .social {
 	display:inline;
-	padding:20px;
 }
 
 .smlinks {
+    display:inline;
 	position:absolute;
 	bottom:0px;
 	right:0px;
