@@ -36,7 +36,13 @@ footer > a {
 }
 
 
-
+p.intro {
+    font-size: 1.3em;
+    position: absolute;
+    top: 7em;
+    left: 16em;
+    width: 42em;
+}
 
 
 .buttons > a:hover {
@@ -47,11 +53,11 @@ footer > a {
 
 
 form {
-    margin:auto;
-    margin-top: 20em;
-    width:60em;
-    padding:2em;
-    border:2px solid black;
+    margin: auto;
+    margin-top: 15em;
+    width: 60em;
+    padding: 2em;
+    border: 2px solid black;
     border-radius: 2em;
 
 }
@@ -95,7 +101,7 @@ nav > a {
     display: inline;
     position:absolute;
     bottom: 2.5em;
-    left:96em;
+    left:80%;
 }
 .navbutton {
     font-family: 'Patua One';
@@ -122,24 +128,23 @@ nav > a {
 
 .background_img {
     position: fixed;
-    top: -8.5em;
-    width: 130em;
-    height: 85em;
+    top: -5%;
+    width: 110%;
  
 }
 
 .title {
     font-size: 3.5em;
     letter-spacing: 0.3em;
-    margin-left: 12em;
-    width: 10em;
+    margin-left: 25%;
+    width: 50%;
 
 }
 
 .subtitle {
     font-size: 1.5em;
-    margin-left: 34em;
-    width: 10em;
+    margin-left: 25%;
+    width: 50%;
     letter-spacing: 0.2em;
 }
 
@@ -190,9 +195,9 @@ nav > a {
 
 .buttons {
     position: absolute;
-    bottom:16em;
-    left:3em;
-    width: 113em;
+    bottom: 25%;
+    left: 5%;
+    width: 90%;
   
     
 }
@@ -200,15 +205,14 @@ nav > a {
 
 .bigbutton {
     font-family: 'Patua One';
-    font-size: 3em;
+    font-size: 2.5em;
     text-decoration: none;
     color: white;
-    letter-spacing: .1em;
     display: inline;
-    margin: .5em;
+    margin: .5%;
     border: 4px solid black;
     border-radius: .5em;
-    padding: 1em;
+    padding: 3%;
     background-color: rgba(28,36,64,.9);
     box-shadow: 10px 10px 10px rgba(10,13,23,.7);
 }
