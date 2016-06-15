@@ -17,7 +17,9 @@
   </script>
 </head>
 
+<div id="wrapper">
 <body>
+  <header>
   <nav class="navbar navbar-default">
     <div class="container-fluid">
 
@@ -26,7 +28,6 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
           <li><a href="#">Link</a></li>
           <li><a href="#">Link</a></li>
           <li><a href="#">Link</a></li>
@@ -36,7 +37,8 @@
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
-  <div id="wrapper">
+  </header>
+
     <div id='slide_1' class='image' data-stellar-background-ratio="0.5">
       <h1>Peter Lowe</h1>
       <h4>Web Developer</h4>
@@ -105,10 +107,118 @@
         </a>
       </div><!--mycarousel-->
     </div><!--slide_3-->
-  </div><!--container-fluid-->
+
+    <div id="slide_4">
+      <div id="about" class="pad-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel well reason" >
+          <div class='reason-text'>
+          <%= image_tag ('glyphicons-691-laptop@3x'), class: 'glyph' %>
+          <h2>He has mad skills in</h2>
+          <h3><span class="rotate">Ruby,Rails,JavaScript,Html,Css,Jquery,Ajax,Sinatra,Bootstrap,SQLite,PostgreSQL,Active Record,MongoDB</span></h3>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="panel well reason" >
+          <div class='reason-text' id='problem-solving'>
+          <%= image_tag ('glyphicons-731-puzzle@3x'), class: 'glyph' %>
+          <h2>He loves problem solving</h2>
+          </div>
+        <canvas id="puzzle-canvas" class='pop-up' ></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div id="sharks" class="col-sm-6">
+        <div class="panel well reason" >
+          <div  class='reason-text' id="shark-text">
+            <%= image_tag ('glyphicons-255-fishes@3x'), class: 'glyph' %>
+            <h2>He's spent well over a month underwater and can tell you cool stories about it.</h2>
+            <h3>Like the time he met these sharks</h3>
+          </div>
+          <div id="shark-video" class="pop-up embed-responsive embed-responsive-16by9">
+            <iframe src="https://player.vimeo.com/video/129990627" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="panel well reason" >
+          <div class='reason-text'>
+          <%= image_tag ('glyphicons-501-education@3x'), class: 'glyph' %>
+          <h2>He has a degree in mechanical engineering so you know he can handle math.</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel well reason" >
+          <div class="reason-text">
+          <%= image_tag ('glyphicons-352-book-open@3x'), class: 'glyph' %>
+          <h2>He's great at learning new things in a short space of time.</h2>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="panel well reason" >
+          <div class='reason-text'>
+          <%= image_tag ('glyphicons-38-coins@3x'), class: 'glyph' %>
+          <h2>He'll bring cookies, everyone loves cookies.</h2>
+          <div id="cookie-sucess" class="alert alert-success" role="alert">You will recive your <span id='cookie-choice'></span> cookies when Pete comes in for his interview</div>
+          <%if @company%>
+          <button class='btn btn-primary' id="choose-cookies">Choose Your Cookies</button>
+          <div id="cookie-form-div">
+           <%= form_tag "company/#{@company.id}" , id: 'cookie-form' do %>
+           <%= select_tag(:cookie ,options_for_select([["Chocolate Chip"], ['Chocolate'], ["Oatmeal Raisin"], ["Sugar"],['Peanut Butter']]), {required: 'true', autofocus: 'true', class: 'form-control'}) %><br>
+           <%= submit_tag "Submit", class: 'btn btn-primary' %>
+           <% end %>
+          </div> 
+          <%end%> 
+          </div>        
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="panel well reason" >
+          <div class='reason-text'>
+          <%= image_tag ('flag-glyph'), class: 'glyph' %>
+          <h2>He has a fun British accent</h2>
+          <h3>Don't worry, he also has a work permit</h3>
+          </div>
+        </div>
+      </div>
+      <div id="debugging"class="col-sm-6">
+        <div class="panel well reason" >
+          <div id="debugging-text"  class='reason-text'>
+          <%= image_tag ('glyphicons-361-bug@3x'), class: 'glyph' %>
+          <h2>He'll never complain about debugging.  It's one of his favorite things</h2>
+          </div>
+          <div id='debug-gif' class="pop-up embed-responsive embed-responsive-16by9">
+            <%=image_tag('debugging.gif', id:'degug-gif')%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
 
     <footer>
-
+      <div id="contact">
+        <p>Email:</p>
+        <a href="mailto:peter.lowe42@gmail.com">peter.lowe42@gmail.com</a>
+      </div>
+      
+      <div id='social-links'>
+        <a href="https://github.com/peterlowe42" target="_blank"><img class='small-link-img' src="./stylesheets/imgs/github1.png"></a>
+        <a href="https://www.linkedin.com/in/peterlowe42" target="_blank"><img class='small-link-img' src="./stylesheets/imgs/linkedin.png"></a>
+      </div>
     </footer>
+
 </body>
+</div><!--container-fluid-->
 </html>  
