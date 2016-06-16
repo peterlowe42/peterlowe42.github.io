@@ -22,14 +22,46 @@ $(document).ready(function(){
     $('#shark-video').show();
   });
 
+  $('#choose-cookies').click(function(e){
+    $("#choose-cookies").hide();
+    $('#cookie-form-div').show();
+  });
+
+  $('#cookie-form').on('submit',function(e){
+    e.preventDefault();
+    var url = $(this).attr('action')
+    var method = $(this).attr('method')
+    var data = $(this).serialize();
+    console.log(url);
+    console.log(method);
+    console.log(data);
+    $.ajax({
+      url: url,
+      method: method,
+      data: data
+    }).done(function(response){
+      console.log(response);
+      $('#cookie-form').hide();
+      $('#cookie-choice').text(response.cookie_preference);
+      $("#cookie-sucess").show();
+    })
+  })
+
   $('#debugging').click(function(e){
     $('#debugging-text').hide();
     $('#debug-gif').show();
   })
 
   $('#problem-solving').click(function(e){
-    $('#media-display').show();
+    $('#problem-solving').hide();
     $('#puzzle-canvas').show();
+    puzzle = $("#puzzle-canvas")
+    console.log(puzzle);
+    console.log(puzzle.parent());
+    console.log(puzzle.parent().parent())
+    console.log(puzzle.parent().parent().parent())
+
+
   })
 
 }); // close out script

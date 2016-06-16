@@ -95,10 +95,7 @@ footer {
   opacity: 0;
 }
 
-.media {
-  display: block;
-/*  margin:auto;*/
-}
+
 
 
 #slide_1 {
@@ -136,18 +133,12 @@ footer {
   color:black;
 }
 
-#media-bucket{
-  margin:10em;
-}
-
 #media-display {
-/*  display:none;*/
   position:fixed;
   top:0px;
-  height: 80%;
-  width:80%;
-  margin-top:5%;
-  margin-left:10%;
+  height: 60%;
+  width:60%;
+  margin:20%;
   background-color:rgba(0,0,0,0.8);
 }
 
