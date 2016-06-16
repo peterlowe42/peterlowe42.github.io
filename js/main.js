@@ -1,7 +1,20 @@
+
 $(document).ready(function(){
   init();
+  $("#js-rotating").Morphext({
+      // The [in] animation type. Refer to Animate.css for a list of available animations.
+      animation: "bounceIn",
+      // An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool).
+      separator: ",",
+      // The delay between the changing of each phrase in milliseconds.
+      speed: 2000,
+      complete: function () {
+          // Called after the entrance animation is executed.
+      }
+  });
+
   $('.reason-text').click(function(e){
-    $('.pop-up').hide();
+    $('.reveal').hide();
     $('.reason-text').show();
   })
 
@@ -46,28 +59,4 @@ $(document).ready(function(){
     $('#puzzle-canvas').show();
   })
 
-   // cache the window object
-   $window = $(window);
-   $(".rotate").textrotator({
-  animation: "flipUp", // You can pick the way it animates when rotating through words. Options are dissolve (default), fade, flip, flipUp, flipCube, flipCubeUp and spin.
-  separator: ",", // If you don't want commas to be the separator, you can define a new separator (|, &, * etc.) by yourself using this field.
-  speed: 1500 // How many milliseconds until the next word show.
-   });
- 
-   $('section[data-type="background"]').each(function(){
-     // declare the variable to affect the defined data-type
-     var $scroll = $(this);
-                     
-      $(window).scroll(function() {
-        // HTML5 proves useful for helping with creating JS functions!
-        // also, negative value because we're scrolling upwards                             
-        var yPos = -($window.scrollTop() / $scroll.data('speed')); 
-         
-        // background position
-        var coords = '50% '+ yPos + 'px';
- 
-        // move the background
-        $scroll.css({ backgroundPosition: coords });    
-      }); // end window scroll
-   });  // end section function
 }); // close out script

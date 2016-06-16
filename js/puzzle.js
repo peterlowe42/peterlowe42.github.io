@@ -17,7 +17,7 @@ var _mouse;
 function init(){
     _img = new Image();
     _img.addEventListener('load',onImage,false);
-    _img.src = "<%= asset_path('puzzle.jpg') %>";
+    _img.src = "./stylesheets/imgs/puzzle.jpg";
 }
 
 function onImage(e){
@@ -219,3 +219,5 @@ function gameOver(){
     document.onmouseup = null;
     initPuzzle();
 }
+
+init();
