@@ -4,10 +4,13 @@
 <head>
 
   <title>Peter Lowe Development</title>
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:700,400,300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="./stylesheets/profile.css">
   <link rel="stylesheet" type="text/css" href="./stylesheets/animate.css">
   <link rel="stylesheet" href="./stylesheets/morphext.css">
+  <link rel="stylesheet" type="text/css" href="./stylesheets/profile.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="./js/morphext.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
@@ -31,30 +34,58 @@
 
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
+            <ul class="nav navbar-nav nav-links">
+              <li><a class='nav-link' href="#bio">About</a></li>
+              <li><a class='nav-link' href="#projects">Projects</a></li>
+              <li><a class='nav-link' href="Resume.pdf" target="_blank">Resume</a></li>
             </ul>
-
-
           </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
       </nav>
+
+      <div id="projects-dropdown">
+        <ul>
+          <li>
+            <div>
+              <h3>Dive Directory</h3>
+              <img class="dropdown-img" src="./stylesheets/imgs/divedirectory-screenshot.png">
+              <img class="dropdown-img vanish" src="./stylesheets/imgs/divedirectoy-transparancy.png"> 
+            </div>  
+          </li>
+          <li>
+            <div>
+              <h3>RoBotanist</h3>
+              <img class="dropdown-img" src="./stylesheets/imgs/robotanist-screenshot.png">
+              <img class="dropdown-img vanish" src="./stylesheets/imgs/robotanist-transparency.png">
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Kanyoda West</h3>
+              <img class="dropdown-img" src="./stylesheets/imgs/twitter-screenshot.png">
+              <img class="dropdown-img vanish" src="./stylesheets/imgs/kanyoda.png" opacity='0.6'>
+            </div>
+          </li>
+        </ul>
+      </div>
     </header>
+  
   <body>
 
 
     <div id='slide_1' class='slide image' data-stellar-background-ratio="0.5">
-      <h1>Peter Lowe</h1>
-      <h4>Web Developer</h4>
+      <div id="title-div">
+        <h1 class="main-title">Peter Lowe</h1>
+        <h4 class="subheading">Web Developer</h4>
+      </div>
     </div><!--slide_1 -->
 
+      <a name="bio"></a>
     <div id='slide_2' class="slide">
       <h1>About Me</h1>
       <p>You think water moves fast? You should see ice. It moves like it has a mind. Like it knows it killed the world once and got a taste for murder. After the avalanche, it took us a week to climb out. Now, I don't know exactly when we turned on each other, but I know that seven of us survived the slide... and only five made it out. Now we took an oath, that I'm breaking now. We said we'd say it was the snow that killed the other two, but it wasn't. Nature is lethal but it doesn't hold a candle to man.</p>
     </div><!--slide_2-->
-
+     <a name="projects"></a>
     <div id='slide_3' class="image slide text-center" data-stellar-background-ratio="0.5">
       <div id="myCarousel" class="carousel slide">
         <h1>Projects</h1>
@@ -114,8 +145,8 @@
       </div><!--mycarousel-->
     </div><!--slide_3-->
 
-    <div id="slide_4" class="slide">
-      <h1>8 Reasons why you should consider hireing Pete</h1>
+    <div id="slide_4" class="slide text-center">
+      <h1>8 Reasons to hire Pete</h1>
       <div id="8-reasons" class="container">
           <div class="row">
             <div class="col-md-6">
@@ -143,10 +174,8 @@
                 <div  class='reason-text' id="shark-text">
                    <img class="glyph"src="./stylesheets/imgs/glyphicons-255-fishes@3x.png">
                   <h3>He's spent over a month underwater and can tell you cool stories about it.</h3>
-                  <p>Like the time he met these sharks</p>
                 </div>
                 <div id="shark-video" class="reveal embed-responsive embed-responsive-16by9">
-                  <!-- <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/129990627" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
                 </div>
               </div>
             </div>
@@ -203,9 +232,8 @@
   </div>
 
   <div id="media-display">
-    <div id="media-bucket">
+ 
       <canvas id="puzzle-canvas" class="media"></canvas>
-    </div>
   </div>
 
   <footer>

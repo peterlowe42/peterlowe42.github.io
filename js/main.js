@@ -12,24 +12,4 @@ $(document).ready(function(){
       }
   });
 
-  $('.reason-text').click(function(e){
-    $('.reveal').hide();
-    $('.reason-text').show();
-  })
-
-  $("#sharks").click(function(e){
-    $('#shark-text').hide();
-    $('#shark-video').show();
-  });
-
-  $('#debugging').click(function(e){
-    $('#debugging-text').hide();
-    $('#debug-gif').show();
-  })
-
-  $('#problem-solving').click(function(e){
-    $('#media-display').show();
-    $('#puzzle-canvas').show();
-  })
-
 }); // close out script
