@@ -12,4 +12,15 @@ $(document).ready(function(){
       }
   });
 
+  $('#projects').hover(function(e){
+    $("#projects-dropdown").css({ top:'5em' });
+  })
+
+  $('#projects-dropdown').mouseleave(function(e){
+    $('#projects-dropdown').css({ top:'-11em'});
+  })
+
+  $(".other").hover(function(e){
+    $('#projects-dropdown').css({ top:'-11em'});
+  })
 }); // close out script
