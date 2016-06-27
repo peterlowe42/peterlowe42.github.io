@@ -1,5 +1,6 @@
 
 $(document).ready(function(){
+  // init();
   $("#js-rotating").Morphext({
       // The [in] animation type. Refer to Animate.css for a list of available animations.
       animation: "bounceIn",
@@ -22,5 +23,16 @@ $(document).ready(function(){
 
   $(".other").hover(function(e){
     $('#projects-dropdown').css({ top:'-11em'});
+  })
+
+  $('#problem-solving').click(function(e){
+    $('#media-display').show();
+    $('#puzzle-canvas').show();
+    init();
+  })
+
+  $('.close-img').click(function(e){
+    $('.popup-media').hide();
+    $(this).parent().hide();
   })
 }); // close out script

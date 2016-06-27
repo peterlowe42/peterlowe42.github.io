@@ -11,7 +11,10 @@ var _puzzleHeight;
 var _pieceWidth;
 var _pieceHeight;
 var _currentPiece;
-var _currentDropPiece; 
+var _currentDropPiece;
+var _leftMargin
+var _topMargin
+
 var _mouse;
 
 function init(){
@@ -25,22 +28,20 @@ function onImage(e){
     _pieceHeight = Math.floor(_img.height / PUZZLE_DIFFICULTY)
     _puzzleWidth = _pieceWidth * PUZZLE_DIFFICULTY;
     _puzzleHeight = _pieceHeight * PUZZLE_DIFFICULTY;
+    _leftMargin = ($('#media-display').width()- _puzzleWidth)/2 
+    _topMargin = ($('#media-display').height() - _puzzleHeight)/2
     setCanvas();
     initPuzzle();
 }
 
 function setCanvas(){
-    _canvas = document.getElementById('puzzle-canvas');
+    _canvas = $('#puzzle-canvas')[0];
     _stage = _canvas.getContext('2d');
     _canvas.width = _puzzleWidth;
     _canvas.height = _puzzleHeight;
     _canvas.style.border = "1px solid black";
-    parentWidth = _canvas.parentElement.offsetWidth;
-    parentHeight = _canvas.parentElement.offsetHeight;
-    leftMargin = (parentWidth - _puzzleWidth)/2;
-    topMargin = (parentHeight - _puzzleHeight)/2;
-    _canvas.style.marginLeft = leftMargin.toString() + 'px'
-    _canvas.style.marginTop = topMargin.toString() + 'px';
+    _canvas.style.marginLeft = _leftMargin.toString() + 'px'
+    _canvas.style.marginTop = _topMargin.toString() + 'px'
 }
 
 function initPuzzle(){
@@ -112,18 +113,16 @@ function shuffleArray(o){
 }
 
 function onPuzzleClick(e){
-    console.log('################')
+    console.log(_canvas.offsetLeft)
     if(e.layerX || e.layerX == 0){
-
-        _mouse.x = e.layerX - _canvas.offsetX;
-        _mouse.y = e.layerY - _canvas.offsetY;
+        _mouse.x = e.layerX - _canvas.offsetLeft + _leftMargin;
+        _mouse.y = e.layerY - _canvas.offsetTop - $("body").scrollTop() + _topMargin;
     }
     else if(e.offsetX || e.offsetX == 0){
-        _mouse.x = e.offsetX - _canvas.offsetX;
-        _mouse.y = e.offsetY - _canvas.offsetY;
+        _mouse.x = e.offsetX - _canvas.offsetLeft + _leftMargin;
+        _mouse.y = e.offsetY - _canvas.offsetTop - $("body").scrollTop() + _topMargin;
     }
     _currentPiece = checkPieceClicked();
-    console.log(_currentPiece)
     if(_currentPiece != null){
         _stage.clearRect(_currentPiece.xPos,_currentPiece.yPos,_pieceWidth,_pieceHeight);
         _stage.save();
@@ -153,12 +152,12 @@ function checkPieceClicked(){
 function updatePuzzle(e){
     _currentDropPiece = null;
     if(e.layerX || e.layerX == 0){
-        _mouse.x = e.layerX;
-        _mouse.y = e.layerY;
+        _mouse.x = e.layerX - _canvas.offsetLeft + _leftMargin;
+        _mouse.y = e.layerY - _canvas.offsetTop - $("body").scrollTop() + _topMargin;
     }
     else if(e.offsetX || e.offsetX == 0){
-        _mouse.x = e.offsetX;
-        _mouse.y = e.offsetY;
+        _mouse.x = e.offsetX - _canvas.offsetLeft + _leftMargin;
+        _mouse.y = e.offsetY - _canvas.offsetTop - $("body").scrollTop() + _topMargin;
     }
     _stage.clearRect(0,0,_puzzleWidth,_puzzleHeight);
     var i;
@@ -228,5 +227,3 @@ function gameOver(){
     document.onmouseup = null;
     initPuzzle();
 }
-
-init();
