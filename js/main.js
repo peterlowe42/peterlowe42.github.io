@@ -1,17 +1,64 @@
 
 $(document).ready(function(){
   // init();
-  $("#js-rotating").Morphext({
-      // The [in] animation type. Refer to Animate.css for a list of available animations.
-      animation: "bounceIn",
-      // An array of phrases to rotate are created based on this separator. Change it if you wish to separate the phrases differently (e.g. So Simple | Very Doge | Much Wow | Such Cool).
+  var _animations = ['bounceIn', 'flipInX', 'zoomIn', 'rubberBand']
+  var _currentAnimation = 'bounceIn'
+
+    
+  $("#bounceIn").Morphext({
+      animation: 'bounceIn',
       separator: ",",
-      // The delay between the changing of each phrase in milliseconds.
       speed: 2000,
       complete: function () {
-          // Called after the entrance animation is executed.
       }
-  });
+  }); 
+
+  $("#flipInX").Morphext({
+      animation: 'flipInX',
+      separator: ",",
+      speed: 2000,
+      complete: function () {
+      }
+  });  
+
+  $("#zoomIn").Morphext({
+      animation: 'zoomIn',
+      separator: ",",
+      speed: 2000,
+      complete: function () {
+      }
+  });  
+
+  $("#rubberBand").Morphext({
+      animation: 'rubberBand',
+      separator: ",",
+      speed: 2000,
+      complete: function () {
+      }
+  }); 
+
+  $('.rotatingText').hide();
+  $('#bounceIn').show();
+
+
+  function cycleAnimation () {
+    for(i=0; i < _animations.length;i++){
+      console.log(_currentAnimation == _animations[i])
+      if (_currentAnimation == _animations[i]){
+        if(i == _animations.length -1){
+          _currentAnimation = 'bounceIn'
+          $('.rotatingText').hide();
+          $('#bounceIn').show();
+        }
+        else {
+          _currentAnimation = _animations[i + 1];
+          $('.rotatingText').hide();
+          $('#' + _animations[i + 1]).show();
+          break;
+        }
+      }
+    }
+  }
 
   $('#projects').hover(function(e){
     $("#projects-dropdown").css({ top:'5em' });
@@ -25,14 +72,42 @@ $(document).ready(function(){
     $('#projects-dropdown').css({ top:'-11em'});
   })
 
+  $('#skills').click(function(e){
+    console.log(e);
+    cycleAnimation();
+  })
+
   $('#problem-solving').click(function(e){
     $('#media-display').show();
     $('#puzzle-canvas').show();
     init();
   })
 
+  $('#sharks').click(function(e){
+    $('#media-display').show();
+    $('#shark-video').show();
+  })
+
+  $('#learning').click(function(e){
+    $('#media-display').show();
+    $('#johnny').show();
+  })
+
+  $('#cookies').click(function(e){
+    $('#cookie-sound')[0].play();
+  })
+
+  $('#debugging').click(function(e){
+    $('#media-display').show();
+    $('#bug-video').show();
+  })
+
+  $('#accent').click(function(e) {
+    $('#media-display').show();
+  })
+
   $('.close-img').click(function(e){
-    $('.popup-media').hide();
+    $('.media').hide();
     $(this).parent().hide();
   })
 }); // close out script
