@@ -85,26 +85,26 @@ $(document).ready(function(){
   })
 
   $('#problem-solving').click(function(e){
-    $('#media-display').show();
     $('#puzzle-canvas').show();
+    $('#media-display').show();
     init();
   })
 
   $('#sharks').click(function(e){
     $('#vidframe').attr('src', sharksrc)
-    $('#media-display').show();
     $('#video').show();
+    $('#media-display').show();
   })
 
   $('#learning').click(function(e){
-    $('#media-display').show();
     $('#johnny').show();
+    $('#media-display').show();
   })
 
   $('#math').click(function(e){
     $('#vidframe').attr('src', mathsrc)
-    $('#media-display').show();
     $('#video').show();
+    $('#media-display').show();
   })
 
   $('#cookies').click(function(e){
@@ -131,14 +131,14 @@ $(document).ready(function(){
 
   $('#debugging').click(function(e){
     $('#vidframe').attr('src', bugsrc);
-    $('#media-display').show();
     $('#video').show();
+    $('#media-display').show();
   })
 
   $('#accent').click(function(e) {
     $('#vidframe').attr('src', britishsrc);
-    $('#media-display').show();
     $('#video').show();
+    $('#media-display').show();
   })
 
   $('.close-img').click(function(e){
