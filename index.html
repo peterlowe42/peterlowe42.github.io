@@ -83,6 +83,7 @@
     </div>
   </div><!--slide_1 -->
 
+  
   <a name="bio"></a>
   <div id='slide_2' class="slide">
     <h1>About Me</h1>
@@ -93,12 +94,6 @@
   <div id='slide_3' class="image slide text-center" data-stellar-background-ratio="0.5">
     <div id="myCarousel" class="carousel slide">
       <h1>Projects</h1>
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
 
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
@@ -155,21 +150,40 @@
     </div><!--mycarousel-->
   </div><!--slide_3-->
 
+  <div id="media-display">
+    <img class="close-img" src="./stylesheets/imgs/glyphicons-193-remove-sign@2x.png">
+
+    <canvas class="media" id="puzzle-canvas" width='500' height='333'></canvas>
+
+    <div class="popup media embed-responsive embed-responsive-16by9" id='video' >
+      <iframe class="embed-responsive-item" id="vidframe"  src="" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+
+    <div class="popup media" id="johnny">
+      <img src="./stylesheets/imgs/johnny-5.gif" style="display:block">
+    </div>
+
+  </div>
+
+
   <div id="slide_4" class="slide text-center">
     <h1>8 Reasons to hire Pete</h1>
     <div id="8-reasons" class="container">
       <div class="row">
         <div class="col-md-6">
-          <div class="reason" >
+          <div class="reason clickable" id='skills'>
             <div class='reason-text'>
               <img class="glyph" src="./stylesheets/imgs/glyphicons-691-laptop@3x.png">
-              <h3>He has mad skills in</h3>
-              <span id="js-rotating">Ruby,Rails,JavaScript,HTML,CSS,JQuery,Ajax,Sinatra,Bootstrap,SQLite,PostgreSQL,Active Record,MongoDB</span>
+              <h3>He has skills in</h3>
+              <span class="rotatingText" id="bounceIn">Ruby,Rails,JavaScript,HTML,CSS,JQuery,Ajax,Sinatra,Bootstrap,SQLite,PostgreSQL,Active Record,MongoDB</span>
+              <span class="rotatingText" id="flipInX">Ruby,Rails,JavaScript,HTML,CSS,JQuery,Ajax,Sinatra,Bootstrap,SQLite,PostgreSQL,Active Record,MongoDB</span>
+              <span class="rotatingText" id="zoomIn">Ruby,Rails,JavaScript,HTML,CSS,JQuery,Ajax,Sinatra,Bootstrap,SQLite,PostgreSQL,Active Record,MongoDB</span>
+              <span class="rotatingText" id="rubberBand">Ruby,Rails,JavaScript,HTML,CSS,JQuery,Ajax,Sinatra,Bootstrap,SQLite,PostgreSQL,Active Record,MongoDB</span>
             </div>
           </div>
         </div>
         <div class="col-md-6">
-          <div class="reason" >
+          <div class="reason clickable" >
             <div class='reason-text' id='problem-solving'>
              <img class="glyph"src="./stylesheets/imgs/glyphicons-731-puzzle@3x.png">
              <h3>He loves problem solving</h3>
@@ -180,17 +194,17 @@
      </div>
      <div class="row">
       <div id="sharks" class="col-md-6">
-        <div class="reason" >
+        <div class="reason clickable" >
           <div  class='reason-text' id="shark-text">
            <img class="glyph"src="./stylesheets/imgs/glyphicons-255-fishes@3x.png">
            <h3>He's spent over a month underwater and can tell you cool stories about it</h3>
+           <h4>Like the time he met these sharks</h4>
          </div>
-         <div id="shark-video" class="reveal embed-responsive embed-responsive-16by9">
-         </div>
+       
        </div>
      </div>
      <div class="col-md-6">
-      <div class="reason" >
+      <div class="reason clickable" id="math">
         <div class='reason-text'>
          <img class="glyph"src="./stylesheets/imgs/glyphicons-501-education@3x.png">
          <h3>He has a degree in mechanical engineering so you know he can handle math</h3>
@@ -200,7 +214,7 @@
  </div>
  <div class="row">
   <div class="col-md-6">
-    <div class="reason" >
+    <div id="learning" class="reason clickable" >
       <div class="reason-text">
        <img class="glyph"src="./stylesheets/imgs/glyphicons-352-book-open@3x.png">
        <h3>He's great at learning new things in a short space of time</h3>
@@ -208,33 +222,38 @@
    </div>
  </div>
  <div class="col-md-6">
-  <div class="reason" >
+  <div class="reason clickable" id="cookies" >
     <div class='reason-text'>
-     <img class="glyph"src="./stylesheets/imgs/cookies.ico">
+     <div id='cookieimgs'>
+       <img class="glyph"src="./stylesheets/imgs/cookies.ico">
+       <img id="cookiemonster" src="./stylesheets/imgs/cookie-monster.png">
+     </div>
      <h3>He'll bring cookies, everyone loves cookies</h3>
+     <audio id="cookie-sound">
+      <source src="./stylesheets/audio/cooookieeees.mp3" type="audio/mpeg">
+     </audio>
    </div>                
  </div>        
 </div>
 </div>
 <div class="row">
   <div class="col-md-6">
-    <div class="reason" >
+    <div class="reason clickable" id="accent">
       <div class='reason-text'>
        <img class="glyph" src="./stylesheets/imgs/flag-glyph.png">
        <h3>He has a fun British accent</h3>
-       <h3>Don't worry, he also has a work permit</h3>
+       <h4>Don't worry, he also has a work permit</h4>
      </div>
    </div>
- </div>
- <div id="debugging"class="col-md-6">
-  <div class="reason" >
-    <div id="debugging-text"  class='reason-text'>
-     <img class="glyph"src="./stylesheets/imgs/glyphicons-361-bug@3x.png">
-     <h3>He'll never complain about debugging.  It's one of his favorite things</h3>
+  </div>
+   <div id="debugging"class="col-md-6">
+    <div class="reason clickable" id="debugging" >
+      <div class='reason-text'>
+       <img class="glyph"src="./stylesheets/imgs/glyphicons-361-bug@3x.png">
+       <h3>He'll never complain about debugging.  It's one of his favorite things</h3>
+     </div>
+  
    </div>
-   <div id='debug-gif' class="unseen">
-   </div>
- </div>
 </div>
 </div>
 

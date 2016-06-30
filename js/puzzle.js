@@ -1,5 +1,5 @@
 const PUZZLE_DIFFICULTY = 4;
-const PUZZLE_HOVER_TINT = '#009900';
+const PUZZLE_HOVER_TINT = '#784387';
  
 var _canvas;
 var _stage;
@@ -11,7 +11,10 @@ var _puzzleHeight;
 var _pieceWidth;
 var _pieceHeight;
 var _currentPiece;
-var _currentDropPiece; 
+var _currentDropPiece;
+var _leftPos
+var _topPos
+
 var _mouse;
 
 function init(){
@@ -25,22 +28,21 @@ function onImage(e){
     _pieceHeight = Math.floor(_img.height / PUZZLE_DIFFICULTY)
     _puzzleWidth = _pieceWidth * PUZZLE_DIFFICULTY;
     _puzzleHeight = _pieceHeight * PUZZLE_DIFFICULTY;
+    _leftPos = ($('#media-display').width()- _puzzleWidth)/2 
+    _topPos = ($('#media-display').height() - _puzzleHeight)/2
     setCanvas();
     initPuzzle();
 }
 
 function setCanvas(){
-    _canvas = document.getElementById('puzzle-canvas');
+    _canvas = $('#puzzle-canvas')[0];
     _stage = _canvas.getContext('2d');
     _canvas.width = _puzzleWidth;
     _canvas.height = _puzzleHeight;
     _canvas.style.border = "1px solid black";
-    parentWidth = _canvas.parentElement.offsetWidth;
-    parentHeight = _canvas.parentElement.offsetHeight;
-    leftMargin = (parentWidth - _puzzleWidth)/2;
-    topMargin = (parentHeight - _puzzleHeight)/2;
-    _canvas.style.marginLeft = leftMargin.toString() + 'px'
-    _canvas.style.marginTop = topMargin.toString() + 'px';
+    _canvas.style.position = 'absolute'
+    _canvas.style.top = _topPos.toString() + 'px'
+    _canvas.style.left = _leftPos.toString() + 'px'
 }
 
 function initPuzzle(){
@@ -112,18 +114,11 @@ function shuffleArray(o){
 }
 
 function onPuzzleClick(e){
-    console.log('################')
-    if(e.layerX || e.layerX == 0){
-
-        _mouse.x = e.layerX - _canvas.offsetX;
-        _mouse.y = e.layerY - _canvas.offsetY;
-    }
-    else if(e.offsetX || e.offsetX == 0){
-        _mouse.x = e.offsetX - _canvas.offsetX;
-        _mouse.y = e.offsetY - _canvas.offsetY;
+    if(e.offsetX || e.offsetX == 0){
+        _mouse.x = e.offsetX - _canvas.offsetLeft + _leftPos;
+        _mouse.y = e.offsetY - _canvas.offsetTop + _topPos;
     }
     _currentPiece = checkPieceClicked();
-    console.log(_currentPiece)
     if(_currentPiece != null){
         _stage.clearRect(_currentPiece.xPos,_currentPiece.yPos,_pieceWidth,_pieceHeight);
         _stage.save();
@@ -152,13 +147,10 @@ function checkPieceClicked(){
 
 function updatePuzzle(e){
     _currentDropPiece = null;
-    if(e.layerX || e.layerX == 0){
-        _mouse.x = e.layerX;
-        _mouse.y = e.layerY;
-    }
-    else if(e.offsetX || e.offsetX == 0){
-        _mouse.x = e.offsetX;
-        _mouse.y = e.offsetY;
+
+    if(e.offsetX || e.offsetX == 0){
+        _mouse.x = e.offsetX - _canvas.offsetLeft + _leftPos;
+        _mouse.y = e.offsetY - _canvas.offsetTop + _topPos;
     }
     _stage.clearRect(0,0,_puzzleWidth,_puzzleHeight);
     var i;
@@ -177,7 +169,7 @@ function updatePuzzle(e){
             else{
                 _currentDropPiece = piece;
                 _stage.save();
-                _stage.globalAlpha = .4;
+                _stage.globalAlpha = .7;
                 _stage.fillStyle = PUZZLE_HOVER_TINT;
                 _stage.fillRect(_currentDropPiece.xPos,_currentDropPiece.yPos,_pieceWidth, _pieceHeight);
                 _stage.restore();
@@ -228,5 +220,3 @@ function gameOver(){
     document.onmouseup = null;
     initPuzzle();
 }
-
-init();
