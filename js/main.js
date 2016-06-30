@@ -4,6 +4,13 @@ $(document).ready(function(){
   var _animations = ['bounceIn', 'flipInX', 'zoomIn', 'rubberBand']
   var _currentAnimation = 'bounceIn'
 
+  var bugsrc = 'https://www.youtube.com/embed/5QmvEbphF8c'
+
+  var sharksrc = "https://player.vimeo.com/video/172509085"
+
+  var mathsrc = 'https://www.youtube.com/embed/SXx2VVSWDMo'
+
+  var britishsrc = "https://www.youtube.com/embed/-c2QzuYldm4"
     
   $("#bounceIn").Morphext({
       animation: 'bounceIn',
@@ -84,8 +91,9 @@ $(document).ready(function(){
   })
 
   $('#sharks').click(function(e){
+    $('#vidframe').attr('src', sharksrc)
     $('#media-display').show();
-    $('#shark-video').show();
+    $('#video').show();
   })
 
   $('#learning').click(function(e){
@@ -93,21 +101,49 @@ $(document).ready(function(){
     $('#johnny').show();
   })
 
+  $('#math').click(function(e){
+    $('#vidframe').attr('src', mathsrc)
+    $('#media-display').show();
+    $('#video').show();
+  })
+
   $('#cookies').click(function(e){
     $('#cookie-sound')[0].play();
+    $('#cookiemonster').slideDown("slow");
+    function shakeNfade() {
+        var div = document.getElementById('cookiemonster');
+        var interval = 70;
+        var distance = 10;
+        var times = 10;
+
+        $(div).css('position', 'absolute');
+
+        for (var iter = 0; iter < (times + 1) ; iter++) {
+            $(div).animate({
+                left: ((iter % 2 == 0 ? distance : distance * -1))
+            }, interval);
+        }                                                                                                          
+        $(div).animate({ left: 0 }, interval);
+        $(div).fadeOut(1500);    
+    }
+    setTimeout(shakeNfade, 1400);
   })
 
   $('#debugging').click(function(e){
+    $('#vidframe').attr('src', bugsrc);
     $('#media-display').show();
-    $('#bug-video').show();
+    $('#video').show();
   })
 
   $('#accent').click(function(e) {
+    $('#vidframe').attr('src', britishsrc);
     $('#media-display').show();
+    $('#video').show();
   })
 
   $('.close-img').click(function(e){
     $('.media').hide();
+    $('#vidframe').attr('src', '')
     $(this).parent().hide();
   })
 }); // close out script

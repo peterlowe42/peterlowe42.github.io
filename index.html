@@ -155,16 +155,12 @@
 
     <canvas class="media" id="puzzle-canvas" width='500' height='333'></canvas>
 
-    <div class="popup media embed-responsive embed-responsive-16by9" id="shark-video">
-      <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/172509085" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    <div class="popup media embed-responsive embed-responsive-16by9" id='video' >
+      <iframe class="embed-responsive-item" id="vidframe"  src="" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </div>
 
     <div class="popup media" id="johnny">
       <img src="./stylesheets/imgs/johnny-5.gif" style="display:block">
-    </div>
-
-     <div class="popup media embed-responsive embed-responsive-16by9" id="bug-video">
-        <iframe class="embed-responsive-item"  src="https://www.youtube.com/embed/5QmvEbphF8c" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </div>
 
   </div>
@@ -208,7 +204,7 @@
        </div>
      </div>
      <div class="col-md-6">
-      <div class="reason clickable" >
+      <div class="reason clickable" id="math">
         <div class='reason-text'>
          <img class="glyph"src="./stylesheets/imgs/glyphicons-501-education@3x.png">
          <h3>He has a degree in mechanical engineering so you know he can handle math</h3>
@@ -228,7 +224,10 @@
  <div class="col-md-6">
   <div class="reason clickable" id="cookies" >
     <div class='reason-text'>
-     <img class="glyph"src="./stylesheets/imgs/cookies.ico">
+     <div id='cookieimgs'>
+       <img class="glyph"src="./stylesheets/imgs/cookies.ico">
+       <img id="cookiemonster" src="./stylesheets/imgs/cookie-monster.png">
+     </div>
      <h3>He'll bring cookies, everyone loves cookies</h3>
      <audio id="cookie-sound">
       <source src="./stylesheets/audio/cooookieeees.mp3" type="audio/mpeg">
@@ -243,7 +242,7 @@
       <div class='reason-text'>
        <img class="glyph" src="./stylesheets/imgs/flag-glyph.png">
        <h3>He has a fun British accent</h3>
-       <h3>Don't worry, he also has a work permit</h3>
+       <h4>Don't worry, he also has a work permit</h4>
      </div>
    </div>
   </div>

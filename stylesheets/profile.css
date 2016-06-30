@@ -199,6 +199,20 @@ p {
   color:#784387;
 }
 
+#cookieimgs {
+  position: relative;
+  width:10em;
+  margin:auto;
+}
+#cookiemonster {
+  position:absolute;
+  display:none;
+  left:0em;
+  bottom:0em;
+  width:11em;
+
+}
+
 #bounceIn {
   color:#784387;
 }
