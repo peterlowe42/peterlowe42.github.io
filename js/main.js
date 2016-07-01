@@ -117,24 +117,6 @@ $(document).ready(function(){
 
   $('#cookies').click(function(e){
     $('#cookie-sound')[0].play();
-    $('#cookiemonster').slideDown("slow");
-    function shakeNfade() {
-        var div = document.getElementById('cookiemonster');
-        var interval = 70;
-        var distance = 10;
-        var times = 10;
-
-        $(div).css('position', 'absolute');
-
-        for (var iter = 0; iter < (times + 1) ; iter++) {
-            $(div).animate({
-                left: ((iter % 2 == 0 ? distance : distance * -1))
-            }, interval);
-        }                                                                                                          
-        $(div).animate({ left: 0 }, interval);
-        $(div).fadeOut(1500);    
-    }
-    setTimeout(shakeNfade, 1400);
   })
 
   $('#debugging').click(function(e){
