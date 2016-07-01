@@ -68,15 +68,23 @@ $(document).ready(function(){
   }
 
   $('#projects').hover(function(e){
-    $("#projects-dropdown").css({ top:'5em' });
+    $("#projects-arrow").show();
+    $("#projects-dropdown").slideDown();
   })
 
   $('#projects-dropdown').mouseleave(function(e){
-    $('#projects-dropdown').css({ top:'-11em'});
+    var hideArrow = function() {
+      $('#projects-arrow').hide();
+    }
+    $('#projects-dropdown').slideUp('slow', hideArrow);
+    
   })
 
   $(".other").hover(function(e){
-    $('#projects-dropdown').css({ top:'-11em'});
+    var hideArrow = function() {
+      $('#projects-arrow').hide();
+    }
+    $('#projects-dropdown').slideUp('slow', hideArrow);  
   })
 
   $('#skills').click(function(e){
