@@ -116,7 +116,12 @@ $(document).ready(function(){
   })
 
   $('#cookies').click(function(e){
-    $('#cookie-sound')[0].play();
+    $('#gameCanvas').show();
+    $('#gameCanvas').width(640);
+    $("#gameCanvas").height(360);
+    $("#gameInstructions").show();
+    initGame();
+    $('#media-display').show();
   })
 
   $('#debugging').click(function(e){
