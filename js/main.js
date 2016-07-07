@@ -72,18 +72,15 @@ $(document).ready(function(){
     $("#projects-dropdown").slideDown();
   })
 
+  function hideArrow () {
+    $('#projects-arrow').hide();
+  }
+
   $('#projects-dropdown').mouseleave(function(e){
-    var hideArrow = function() {
-      $('#projects-arrow').hide();
-    }
-    $('#projects-dropdown').slideUp('slow', hideArrow);
-    
+    $('#projects-dropdown').slideUp('slow', hideArrow); 
   })
 
   $(".other").hover(function(e){
-    var hideArrow = function() {
-      $('#projects-arrow').hide();
-    }
     $('#projects-dropdown').slideUp('slow', hideArrow);  
   })
 
