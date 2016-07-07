@@ -40,8 +40,7 @@ function setCanvas(){
     _canvas.width = _puzzleWidth;
     _canvas.height = _puzzleHeight;
     _canvas.style.border = "1px solid black";
-    _canvas.style.position = 'absolute'
-    _canvas.style.top = _topPos.toString() + 'px'
+
     _canvas.style.left = _leftPos.toString() + 'px'
 }
 
