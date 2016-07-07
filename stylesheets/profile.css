@@ -134,7 +134,7 @@ p {
 
 .navbar-nav>li>a {
   color:#e7e6e4;
-  background-color: #2D2C2E;
+  /*background-color: #2D2C2E;*/
   padding:1em;
   width:10em;
   font-family: 'Lato', sans-serif;
