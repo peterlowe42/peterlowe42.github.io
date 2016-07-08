@@ -85,14 +85,30 @@ p {
   margin:auto;
 }
 .reason {
-  height: 23em;
+  height: 20em;
   width:80%;
   margin:auto;
   font-family: 'Lato', sans-serif;
   color:#e6e6e6;
   padding: 1em;
+  margin-bottom: 2em;
   text-align: center;
   background-color: #7A7A79;
+  border-radius: 5em;
+
+}
+
+.reason:hover .spotlight {
+  box-shadow: 0px 0px 190px 100px #2D2C2E;
+}
+
+.spotlight {
+  width: 0px;
+  height: 0px;
+  position: relative;
+  left: 14em;
+  top: 5em;
+  transition: box-shadow 0.5s;
 }
 
 .small-link-img {
@@ -203,6 +219,10 @@ p {
   font-weight: 700;
   font-size: 3em;
   color:#784387;
+}
+
+#reasons {
+  padding-top: 3em
 }
 
 #gameCanvas {
