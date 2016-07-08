@@ -29,7 +29,7 @@ function onImage(e){
     _puzzleWidth = _pieceWidth * PUZZLE_DIFFICULTY;
     _puzzleHeight = _pieceHeight * PUZZLE_DIFFICULTY;
     _leftPos = ($('#media-display').width()- _puzzleWidth)/2 
-    _topPos = ($('#media-display').height() - _puzzleHeight)/2
+    _topPos = 20;
     setCanvas();
     initPuzzle();
 }
@@ -115,7 +115,7 @@ function shuffleArray(o){
 function onPuzzleClick(e){
     if(e.offsetX || e.offsetX == 0){
         _mouse.x = e.offsetX - _canvas.offsetLeft + _leftPos;
-        _mouse.y = e.offsetY - _canvas.offsetTop + _topPos;
+        _mouse.y = e.offsetY;
     }
     _currentPiece = checkPieceClicked();
     if(_currentPiece != null){
@@ -149,7 +149,7 @@ function updatePuzzle(e){
 
     if(e.offsetX || e.offsetX == 0){
         _mouse.x = e.offsetX - _canvas.offsetLeft + _leftPos;
-        _mouse.y = e.offsetY - _canvas.offsetTop + _topPos;
+        _mouse.y = e.offsetY;
     }
     _stage.clearRect(0,0,_puzzleWidth,_puzzleHeight);
     var i;
