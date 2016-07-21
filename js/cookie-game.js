@@ -62,7 +62,7 @@ function startSprite(){
   catcher = new createjs.Sprite(spriteSheet);
   stage.addChild(catcher);
   catcher.x = (WIDTH-60)/2
-    catcher.y = HEIGHT - 75
+  catcher.y = HEIGHT - 75
 
   var sheetTest = new createjs.Bitmap(CATCHER);
   sheetTest.x = 10;
@@ -102,11 +102,17 @@ function startGame(){
   startTime = Date.now();
 }
 function resetGame() {
-  stage.removeAllChildren();
-  count.text = '0'
-  stage.addChild(catcher);
-  stage.addChild(count);
-  stage.addChild(startButton);
+  gameOn = false;
+  if (stage) {
+    catcher.gotoAndStop('chomp');
+    catcher.x = (WIDTH-60)/2
+    catcher.y = HEIGHT - 75
+    stage.removeAllChildren();
+    count.text = '0'
+    stage.addChild(catcher);
+    stage.addChild(count);
+    stage.addChild(startButton);   
+  }
 }
 
 
