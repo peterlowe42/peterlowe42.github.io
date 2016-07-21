@@ -103,14 +103,16 @@ function startGame(){
 }
 function resetGame() {
   gameOn = false;
-  catcher.gotoAndStop('chomp');
-  catcher.x = (WIDTH-60)/2
-  catcher.y = HEIGHT - 75
-  stage.removeAllChildren();
-  count.text = '0'
-  stage.addChild(catcher);
-  stage.addChild(count);
-  stage.addChild(startButton);
+  if (stage) {
+    catcher.gotoAndStop('chomp');
+    catcher.x = (WIDTH-60)/2
+    catcher.y = HEIGHT - 75
+    stage.removeAllChildren();
+    count.text = '0'
+    stage.addChild(catcher);
+    stage.addChild(count);
+    stage.addChild(startButton);   
+  }
 }
 
 
