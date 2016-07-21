@@ -117,7 +117,9 @@ $(document).ready(function(){
     $('#gameCanvas').width(640);
     $("#gameCanvas").height(360);
     $("#gameInstructions").show();
-    initGame();
+    if (stage == undefined){
+      initGame();
+    }
     $('#media-display').show();
   })
 
@@ -136,6 +138,7 @@ $(document).ready(function(){
   $('.close-img').click(function(e){
     $('.media').hide();
     $('#vidframe').attr('src', '')
+    resetGame();
     $(this).parent().hide();
   })
 }); // close out script
