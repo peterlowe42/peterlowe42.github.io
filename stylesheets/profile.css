@@ -76,6 +76,8 @@ p {
   width:8em;
   -webkit-filter: invert(.9); 
     filter: invert(.9);
+  -webkit-transition: width 0.5s, -webkit-filter 0.5s;
+  transition: width 0.5s, filter 0.5s;
 }
 
 .reveal {
@@ -95,12 +97,17 @@ p {
   text-align: center;
   background-color: #7A7A79;
   border-radius: 5em;
-
 }
 
-.reason:hover .spotlight {
+.reason:hover .glyph {
+  width:9em;
+  -webkit-filter:invert(.9) drop-shadow(5px 5px 5px #222);
+  filter: invert(.9)  drop-shadow(5px 5px 5px #222); 
+}
+
+/*.reason:hover .spotlight {
   box-shadow: 0px 0px 190px 100px #2D2C2E;
-}
+}*/
 
 .spotlight {
   width: 0px;
