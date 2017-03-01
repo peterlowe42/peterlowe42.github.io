@@ -63,6 +63,7 @@ function startSprite(){
   stage.addChild(catcher);
   catcher.x = (WIDTH-60)/2
   catcher.y = HEIGHT - 75
+  catcher.frequency = 2
 
   var sheetTest = new createjs.Bitmap(CATCHER);
   sheetTest.x = 10;

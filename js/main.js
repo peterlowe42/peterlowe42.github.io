@@ -77,7 +77,7 @@ $(document).ready(function(){
   }
 
   $('#projects-dropdown').mouseleave(function(e){
-    $('#projects-dropdown').slideUp('slow', hideArrow); 
+    //$('#projects-dropdown').slideUp('slow', hideArrow); 
   })
 
   $(".other").hover(function(e){
