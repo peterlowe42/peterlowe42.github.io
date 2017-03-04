@@ -42,6 +42,13 @@
           <li><a class='nav-link other' href="#bio">About</a></li>
           <li><a id='projects' class='nav-link' href="#projects">Projects</a>
             <div id='projects-arrow'></div>
+            <ul id="proj-menu-mob">
+              <li class='menu-expand'><a href="http://thedivedirectory.co.uk/" target="_blank">Dive Directory</a></li>
+              <li class='menu-expand'><a href="http://robotanist.herokuapp.com/" target="_blank">RoBotanist</a></li>
+              <li class='menu-expand'><a href="http://timeinator.herokuapp.com/" target="_blank">The Timeinator</a></li>
+              <li class='menu-expand'><a href="https://twitter.com/kanyodawest?lang=en" target="_blank">Kanyoda West</a></li>
+              <li class='menu-expand'><a href="http://azhousing.org/" target="_blank">azhousing.org</a></LI>
+            </ul>
           </li>
           <li><a class='nav-link other' href="Resume.pdf" target="_blank">Resume</a></li>
         </ul>
@@ -49,57 +56,70 @@
     </div><!-- /.container-fluid -->
   </nav>
 
-  <div id="projects-dropdown">
-    <div class="row col-md-12">
-      <div class="menuProj col-md-2 col-sm-12">
-        <div>
-          <h3>Dive Directory</h3>
-          <a href="http://thedivedirectory.co.uk/" target="_blank">
-            <img class="dropdown-img" src="./stylesheets/imgs/divedirectory-screenshot.png">
-            <img class="dropdown-img vanish" src="./stylesheets/imgs/divedirectoy-transparancy.png"> 
-          </a>
-        </div>  
+  <div id="projects-dropdown" class="row col-sm-4justify-content-center align-items-center">
+
+      <div class="row justify-content-center align-items-center">
+       <div class="col-md-2 col-sm-2 text-center">
+         <a class="drop-link" href="http://thedivedirectory.co.uk/" target="_blank">Dive Directory</a>
+       </div> 
+       <div class="col-md-2 col-sm-2 text-center">
+         <a class="drop-link" href="http://robotanist.herokuapp.com/" target="_blank">RoBotanist</a>
+       </div> 
+        <div class="col-md-2 col-sm-2 text-center">
+          <a class="drop-link" href="http://timeinator.herokuapp.com/" target="_blank">The Timeinator</a>
+       </div> 
+       <div class="col-md-2 col-sm-2 text-center">
+        <a class="drop-link" href="https://twitter.com/kanyodawest?lang=en" target="_blank">Kanyoda West</a>
+       </div> 
+       <div class="col-md-2 col-sm-2 text-center">
+         <a class="drop-link" href="http://azhousing.org/" target="_blank">azhousing.org</a>
+       </div>  
       </div>
-      <div class="menuProj col-md-2 col-sm-12">
-        <div>
-          <h3>RoBotanist</h3>
-          <a href="http://robotanist.herokuapp.com/" target="_blank">
-            <img class="dropdown-img" src="./stylesheets/imgs/robotanist-screenshot.png">
-            <img class="dropdown-img vanish" src="./stylesheets/imgs/robotanist-transparency.png">
-          </a>
+
+      <div id="imgRow" class="row justify-content-center align-items-center">
+        
+        <div class="menuProj col-md-2 col-sm-2 text-center">
+            <div>
+              <img class="dropdown-img" src="./stylesheets/imgs/divedirectory-screenshot.png">
+              <img class="dropdown-img vanish" src="./stylesheets/imgs/divedirectoy-transparancy.png"> 
+            </div> 
         </div>
-      </div>
-      <div class="menuProj col-md-2 col-sm-12">
-        <div>
-          <h3>The Timeinator</h3>
-          <a href="http://timeinator.herokuapp.com/" target="_blank">
-            <img class="dropdown-img" src="./stylesheets/imgs/timeinator.png">
-            <div class="dropdown-img vanish">
-              <h4>The</h4>
-              <h4>Timeinator</h4>
-            </div>  
-          </a>
-        </div>
-      </div>
-      <!-- <div class="row">  -->
-        <div class="menuProj col-md-2 col-sm-12">
+        <div class="menuProj col-md-2 col-sm-2 text-center">
           <div>
-            <h3>Kanyoda West</h3>
-            <a href="https://twitter.com/kanyodawest?lang=en" target="_blank">
-              <img class="dropdown-img" src="./stylesheets/imgs/twitter-screenshot.png">
-              <img class="dropdown-img vanish" src="./stylesheets/imgs/kanyoda.png" opacity='0.6'>
+            <a href="http://robotanist.herokuapp.com/" target="_blank">
+              <img class="dropdown-img" src="./stylesheets/imgs/robotanist-screenshot.png">
+              <img class="dropdown-img vanish" src="./stylesheets/imgs/robotanist-transparency.png">
             </a>
           </div>
         </div>
-        <div class="menuProj col-md-2 col-sm-12" >
+        <div class="menuProj col-md-2 col-sm-2 text-center">
           <div>
-            <h3>azhousing.org</h3>
-            <a href="http://azhousing.org/" target="_blank">
-              <img class="dropdown-img" src="./stylesheets/imgs/azhousing.png">
-              <img class="dropdown-img vanish" src="./stylesheets/imgs/AZLogo.png" opacity='0.6'>
+            <a href="http://timeinator.herokuapp.com/" target="_blank">
+              <img class="dropdown-img" src="./stylesheets/imgs/timeinator.png">
+              <img class="dropdown-img vanish" src="./stylesheets/imgs/timeinator-transparancy.png">  
             </a>
           </div>
         </div>
+
+          <div class="menuProj col-md-2 col-sm-2 text-center">
+            <div>
+
+              <a href="https://twitter.com/kanyodawest?lang=en" target="_blank">
+                <img class="dropdown-img" src="./stylesheets/imgs/twitter-screenshot.png">
+                <img class="dropdown-img vanish" src="./stylesheets/imgs/kanyoda.png" opacity='0.6'>
+              </a>
+            </div>
+          </div>
+          <div class="menuProj col-md-2 col-sm-2 text-center" >
+            <div>
+
+              <a href="http://azhousing.org/" target="_blank">
+                <img class="dropdown-img" src="./stylesheets/imgs/azhousing.png">
+                <img class="dropdown-img vanish" src="./stylesheets/imgs/AZLogo.png" opacity='0.6'>
+              </a>
+            </div>
+          </div>
+      </div>  
       <!-- </div> -->  
     </div>
   </div>

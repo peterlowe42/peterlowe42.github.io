@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-  // init();
+
   var _animations = ['bounceIn', 'flipInX', 'zoomIn', 'rubberBand']
   var _currentAnimation = 'bounceIn'
 
@@ -69,7 +69,21 @@ $(document).ready(function(){
 
   $('#projects').hover(function(e){
     $("#projects-arrow").show();
-    $("#projects-dropdown").slideDown();
+    if ($("body").innerWidth() > 768){
+      $("#projects-dropdown").slideDown();
+    } 
+  })
+
+  $('#projects').click(function(e){
+    e.preventDefault();
+    if ($('#proj-menu-mob').css('display') == 'block') {
+      if($('.menu-expand').css('height') == '0px') {
+        $('.menu-expand').height(40) 
+      }
+      else{
+        $('.menu-expand').height(0) 
+      }
+    }
   })
 
   function hideArrow () {
@@ -77,7 +91,7 @@ $(document).ready(function(){
   }
 
   $('#projects-dropdown').mouseleave(function(e){
-    //$('#projects-dropdown').slideUp('slow', hideArrow); 
+    $('#projects-dropdown').slideUp('slow', hideArrow); 
   })
 
   $(".other").hover(function(e){
@@ -141,4 +155,6 @@ $(document).ready(function(){
     resetGame();
     $(this).parent().hide();
   })
-}); // close out script
+
+
+}); 
