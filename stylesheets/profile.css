@@ -94,6 +94,7 @@ div.carousel-img {
   left:10px;
   padding-right: 5px;
   width:100%;
+  max-width: 250px;
   cursor: pointer;
 }
 
@@ -477,6 +478,7 @@ div.carousel-img {
   }
 
   #projects-dropdown {
+    display:none;
     position: fixed;
     left:10em;
     width:50%;
@@ -487,17 +489,19 @@ div.carousel-img {
     display:block;
   }
 
-  #projects-dropdown {
-    display:none;
-  }
 
   .menuProj {
     display: block;
-    margin-right: 10px;
     margin:auto;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .dropdown-img > h4{
     font-size:0.8em;
+  }
+
+  .dropdown-img {
+    max-height: 100%
   }
 }
