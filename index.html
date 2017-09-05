@@ -43,31 +43,31 @@
           <li><a id='projects' class='nav-link' href="#projects">Projects</a>
             <div id='projects-arrow'></div>
             <ul id="proj-menu-mob">
+              <li class='menu-expand'><a href="https://gurladventures.herokuapp.com/" target="_blank">Gurl Adventures</a></li>
               <li class='menu-expand'><a href="http://thedivedirectory.co.uk/" target="_blank">Dive Directory</a></li>
-              <li class='menu-expand'><a href="http://www.reliasoft.com/synthesis/portal/index.htm" target="_blank">SEP</a></li>
-              <!--<li class='menu-expand'><a href="http://timeinator.herokuapp.com/" target="_blank">The Timeinator</a></li> -->
+              <li class='menu-expand'><a href="http://timeinator.herokuapp.com/" target="_blank">The Timeinator</a></li> 
               <li class='menu-expand'><a href="https://twitter.com/kanyodawest?lang=en" target="_blank">Kanyoda West</a></li>
             </ul>
           </li>
-          <li><a class='nav-link other' href="PeterLowe.pdf" target="_blank">Resume</a></li>
+          <li><a class='nav-link other' href="Resume2017.pdf" target="_blank">Resume</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
 
-  <div id="projects-dropdown" class="row col-sm-4justify-content-center align-items-center">
+  <div id="projects-dropdown" class="row col-sm-4 justify-content-center align-items-center">
 
       <div class="row justify-content-center align-items-center">
-       <div class="col-md-4 col-sm-4">
+        <div class="col-md-3 col-sm-4">
+          <a class="drop-link" href="https://gurladventures.herokuapp.com/" target="_blank">Gurl Adventures</a>
+       </div> 
+       <div class="col-md-3 col-sm-4">
          <a class="drop-link" href="http://thedivedirectory.co.uk/" target="_blank">Dive Directory</a>
        </div> 
-  <!--      <div class="col-md-2 col-sm-2 text-center">
-         <a class="drop-link" href="http://robotanist.herokuapp.com/" target="_blank">RoBotanist</a>
-       </div>  -->
-        <div class="col-md-4 col-sm-4">
-          <a class="drop-link" href="http://www.reliasoft.com/synthesis/portal/index.htm" target="_blank">Synthesis Enterprise Portal</a>
+       <div class="col-md-3 col-sm-4">
+         <a class="drop-link" href="http://timeinator.herokuapp.com/" target="_blank">The Timeinator</a>
        </div> 
-       <div class="col-md-4 col-sm-4">
+       <div class="col-md-3 col-sm-4">
         <a class="drop-link" href="https://twitter.com/kanyodawest?lang=en" target="_blank">Kanyoda West</a>
        </div> 
        
@@ -75,21 +75,23 @@
 
       <div id="imgRow" class="row justify-content-center align-items-center">
         
-        <div class="menuProj col-md-4 col-sm-4 text-center justify-content-center">
-            <div>
-              <img class="dropdown-img" src="./stylesheets/imgs/divedirectory-screenshot.png">
-              <img class="dropdown-img vanish" src="./stylesheets/imgs/divedirectoy-transparancy.png"> 
-            </div> 
-        </div>
-        <div class="menuProj col-md-4 col-sm-4 text-center">
+        <div class="menuProj col-md-3 col-sm-4 text-center">
           <div>
-            <a href="http://www.reliasoft.com/synthesis/portal/index.htm" target="_blank">
-              <img class="dropdown-img" src="./stylesheets/imgs/sep.png">
-              
+            <a href="https://gurladventures.herokuapp.com/" target="_blank">
+              <img class="dropdown-img" src="./stylesheets/imgs/gurladventures-screenshot.png">
+              <img class="dropdown-img vanish" src="./stylesheets/imgs/gurladventures-transparancy.png">              
             </a>
           </div>
         </div>
-       <!--  <div class="menuProj col-md-2 col-sm-2 text-center">
+        <div class="menuProj col-md-3 col-sm-4 text-center ">
+            <div>
+              <a href="http://thedivedirectory.co.uk/" target="_blank">
+              <img class="dropdown-img" src="./stylesheets/imgs/divedirectory-screenshot.png">
+              <img class="dropdown-img vanish" src="./stylesheets/imgs/divedirectoy-transparancy.png"> 
+              </a>
+            </div> 
+        </div>
+        <div class="menuProj col-md-3 col-sm-2 text-center">
           <div>
             <a href="http://timeinator.herokuapp.com/" target="_blank">
               <img class="dropdown-img" src="./stylesheets/imgs/timeinator.png">
@@ -97,8 +99,8 @@
             </a>
           </div>
         </div>
- -->
-          <div class="menuProj col-md-4 col-sm-4 text-center">
+
+          <div class="menuProj col-md-3 col-sm-4 text-center">
             <div>
               <a href="https://twitter.com/kanyodawest?lang=en" target="_blank">
                 <img class="dropdown-img" src="./stylesheets/imgs/twitter-screenshot.png">
@@ -215,7 +217,20 @@
       <!-- Wrapper for slides -->
       <div class="carousel-inner" role="listbox">
 
-        <div class="item active">
+         <div class="item active">
+          <div class="carousel-div">
+            <h1>Gurl Advenutes</h1>
+            <a href="https://gurladventures.herokuapp.com/" target="_blank">
+              <img class="carousel-img" src="./stylesheets/imgs/gurladventures-screenshot.png">
+              <img class="carousel-img vanish" src="./stylesheets/imgs/gurladventures-transparancy.png">
+            </a>
+            <div class='carousel-text'>
+              <p>A blog site focusing on stories about women doing exciting and adventurous things. Developed pro bono in ruby on rails. (Still in development).</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
           <div class="carousel-div">
             <h1>Dive Directory</h1>
             <a href="http://thedivedirectory.co.uk/" target="_blank">
@@ -230,19 +245,6 @@
 
          <div class="item">
           <div class="carousel-div">
-            <h1>Synthesis Enterprise Portal</h1>
-            <a href="http://www.reliasoft.com/synthesis/portal/index.htm" target="_blank">
-              <img class="carousel-img" src="./stylesheets/imgs/sep.png">
-
-            </a>
-            <div class='carousel-text'>
-              <p>The main app I worked on during my time at reliasoft. SEP provides an online interface for users of reliasofts Synthesis platform to view data and manage projects.</p>
-            </div>
-          </div>
-        </div>
-
-         <!-- <div class="item">
-          <div class="carousel-div">
             <h1>The Timeinator</h1>
             <a href="http://timeinator.herokuapp.com/" target="_blank">
               <img class="carousel-img" src="./stylesheets/imgs/timeinator.png">
@@ -256,7 +258,7 @@
             </div>
           </div>
         </div>
- -->
+
         <div class="item">
           <div class="carousel-div">
             <h1>Kanyoda West</h1>
